@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions">
+  <meta property="og:title" content="OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions"/>
+  <meta property="og:description" content="OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions"/>
+  <meta property="og:url" content="https://be2rlab.github.io/OSMa-Bench/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/teaser.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions">
+  <meta name="twitter:description" content="OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:card" content="static/images/full_pipeline.png">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Open Semantic Mapping, Benchmark, SLAM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>OSMa-Bench</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Header-->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">OSMa-Bench: <br><span style="font-size:2.4rem;">Evaluating Open Semantic Mapping Under Varying Lighting Conditions</span></h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/warmhammer" target="_blank">Maxim Popov</a><sup>1*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://github.com/lumalfo" target="_blank">Regina Kurkova</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://github.com/MikhailIum" target="_blank">Mikhail Iumanov</a><sup>1</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://github.com/JaafarMahmoud1" target="_blank">Jaafar Mahmoud</a><sup>1</sup>,</span>
+                      <span class="author-block">
+                        <a href="https://en.itmo.ru/en/viewperson/464/Sergey_Kolyubin.htm" target="_blank">Sergey Kolyubin</a><sup>1</sup>
+                      </span>
+                    </span>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="eql-cntrb"><small><sup>*</sup>Indicates Corresponding Author</small></span><br>
+                    <span class="author-block">
+                      BE2R Lab, ITMO University
+                      <!-- <br>Conferance name and year -->
+                    </span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/be2rlab/OSMa-Bench" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End header-->
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/full_pipeline.png" alt="OSMa-Bench Pipeline"/>
+      <h2 class="subtitle has-text-centered">
+        Our work evaluates open semantic mapping quality providing an automated LLM/LVLM-based alternative to human assessment. We generate test sequences with different lighting conditions in a simulated indoor environment. Extra modifier such as variations in robot nominal velocity is applied as well.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Open Semantic Mapping (OSM) is a key technology in robotic perception, combining semantic segmentation and SLAM techniques. 
+            This paper introduces a dynamically configurable and highly automated LLM/LVLM-powered pipeline for evaluating OSM solutions 
+            called <strong><em>OSMa-Bench</em></strong> (Open Semantic Mapping Benchmark). The study focuses on evaluating state-of-the-art semantic mapping 
+            algorithms under varying indoor lighting conditions, a critical challenge in indoor environments. We introduce a novel dataset 
+            with simulated RGB-D sequences and ground truth 3D reconstructions, facilitating the rigorous analysis of mapping performance 
+            across different lighting conditions. Through experiments on leading models such as 
+            <a href="https://concept-graphs.github.io/" style="font-style: italic;">ConceptGraphs</a>, 
+            <a href="https://linukc.github.io/BeyondBareQueries/" style="font-style: italic;">BBQ</a> and 
+            <a href="https://pengsongyou.github.io/openscene" style="font-style: italic;">OpenScene</a>, 
+            we evaluate the semantic fidelity of object recognition and segmentation. 
+            Additionally, we introduce a Scene Graph evaluation method to analyze the ability of models to interpret semantic structure. 
+            The results provide insights into the robustness of these models, forming future research directions for developing resilient 
+            and adaptable robotic systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Data preparation part -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Data Preparation</h2>
+        <div class="content has-text-justified has-text-centered">
+          <p>
+            We assigned sets of 22 and 8 scenes for ReplicaCAD and HM3D datasets, respectively, distinct in test conditions' configurations:
+            <ul>
+              <li><em>"Baseline":</em> Uses static, non-uniformly distributed light sources available as a default scenario for the ReplicaCAD dataset only;</li>
+              <li><em>"Dynamic lighting":</em> Corresponds to changing light conditions along the robot's path (ReplicaCAD only);</li>
+              <li><em>"Nominal lights":</em> Relies on the mesh itself emitting light without any added light sources;</li>
+              <li><em>"Camera light":</em> Introduces an extra directed light source attached to the camera.</li>
+            </ul>
+            Also for both datasets we applied <em>"Velocity"</em> modification meaning we recorded sequences at doubled velocity (relative to the <em>"Baseline"</em> for ReplicaCAD and the <em>"Nominal lights"</em> for HM3D).
+          </p>
+
+          <div class="item item-video0">
+            <p>
+              <video poster="" id="video0" autoplay controls muted loop height="100%">
+                <!-- Your video file here -->
+                <source src="static/videos/combined_semantics.mp4" type="video/mp4">
+              </video>
+              <p class="subtitle has-text-centered">
+                We expanded the semantic description of the Replica CAD dataset. This made it possible to consider both 
+                classes describing parts of the apartment (for example, <code>wall</code>, <code>floor</code>, <code>stairs</code>) 
+                and classes describing furniture and household utensils during testing.
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End data preparation part -->
+
+<!-- ReplicaCAD video carousel -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_v3_sc1_staging_19_baseline.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Baseline configuration</p>
+        </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_v3_sc1_staging_19_no_lights.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Nominal Lights configuration</p>
+        </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_v3_sc1_staging_19_camera_lights.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Camera Light configuration</p>
+        </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_v3_sc1_staging_19_dynamic_lights.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Dynamic Lights configuration</p>
+        </div>
+      </div>
+      <br>
+    <h2 class="subtitle has-text-centered">We applied 4 lighting configurations to <strong>ReplicaCAD</strong> dataset: <em>"Baseline"</em>, <em>"Nominal Lights"</em>, <em>"Camera Light"</em> and <em>"Dynamic Lights"</em> respectively</h2>
+    </div>
+  </div>
+</section>
+<!-- End ReplicaCAD video carousel -->
+
+<!-- HM3D video carousel -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_00808-y9hTuugGdiq_no_lights_2.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Nominal Lights configuration</p>
+        </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_00808-y9hTuugGdiq_camera_lights_2.mp4" type="video/mp4">
+          </video>
+          <!-- <p id="overlay">Camera Light configuration</p> -->
+        </div>
+      </div>
+      <br>
+    <h2 class="subtitle has-text-centered">We applied 2 lighting configurations to <strong>Habitat Matterport 3D</strong> dataset: <em>"Nominal Lights"</em> and <em>"Camera Light"</em> respectively</h2>
+    </div>
+  </div>
+</section>
+<!-- End HM3D video carousel -->
+
+<!-- VQA part -->
+<section class="container is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Visual Question Answering</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <img src="static/images/vqa_pipeline.png" alt="Visual Question Answering Pipeline"/>
+          <h2 class="subtitle has-text-centered">
+            We utilize LLM and LVLM to get scene frames descriptions and construct a set of questions and corresponding ground truth answers, which are additionally validated and balanced in order to avoid usage of ambiguous questions for the further evaluation of the scene graph.
+          </h2>
+
+          <div class="content has-text-justified has-text-centered">
+            <p>We sample frames along the movement within a previously generated test scene. For each key frame, we employ LVLM to generate scene descriptions and further construct a set of questions each targeting specific aspects of scene understanding:</p>
+  
+            <ol>
+                <li><strong>Binary General</strong> – Yes/No questions about the presence of objects and general scene characteristics (e.g., <code>Is there a blue sofa?</code>).</li>
+                <li><strong>Binary Existence-Based</strong> – Yes/No questions designed to track false positives by querying non-existent objects (e.g., <code>Is there a piano?</code>).</li>
+                <li><strong>Binary Logical</strong> – Yes/No questions with logical operators such as AND/OR (e.g., <code>Is there a chair AND a table?</code>).</li>
+                <li><strong>Measurement</strong> – Questions requiring numerical answers related to object counts or scene attributes (e.g., <code>How many windows are present?</code>).</li>
+                <li><strong>Object Attributes</strong> – Queries about object properties, including color, shape, and material (e.g., <code>What color is the door?</code>).</li>
+                <li><strong>Object Relations - Functional</strong> – Questions about functional relationships between objects (e.g., <code>Which object supports the table?</code>).</li>
+                <li><strong>Object Relations - Spatial</strong> – Queries about spatial placement of objects within the scene (e.g., <code>What is in front of the staircase?</code>).</li>
+                <li><strong>Comparison</strong> – Questions that compare object properties such as size, color, and position (e.g., <code>Which is taller: the bookshelf or the lamp?</code>).</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End VQA part -->
+
+<!-- Experiments -->
+<section class="section is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Experiments</h2>
+
+      <!-- Semantic Segmentation -->
+      <h3 class="title is-4">Semantic Segmentation</h3>
+      <img src="static/images/semseg_results.png" />
+
+      <div class="content has-text-justified">
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <p>
+              We assigned sets of 22 and 8 scenes for ReplicaCAD and HM3D datasets respectively distinct in test conditions' configurations.
+            </p>
+          </tr>
+          <tr>
+            <td width="50%">
+              <p>
+                The evaluation was conducted for three methods: ConceptGraphs, OpenScene, and a very recent BBQ. These methods employ 
+                different approaches, so we can perform benchmarking on a wider spectrum. 
+                <br>
+                Obtained results for segmentation quality metrics for all considered methods and scenes are presented in Tables I-III, 
+                while its relative change (degradation) under different test conditions are illustrated on a ReplicaCAD dataset (less means less robust).
+              </p>
+            </td>
+            <td width="50%">
+              <img src="static/images/degradation_barplot.png">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Semantic Graph Evaluation -->
+      <h3 class="title is-4">Semantic Graph Evaluation</h3>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/vqa_polar_plots.png"/>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        The VQA pipeline generated on average <b><em>184</em></b> and <b><em>76</em></b> questions for each scene, 
+        which gives us in total <b><em>4055</em></b> and <b><em>611</em></b> questions for <strong>ReplicaCAD</strong> and <strong>HM3D</strong> respectively.
+      </h2>
+
+      <div class="content has-text-justified has-text-centered"></div>
+        <p>
+          The average ratio between different questions' categories is the following: <em>18.6%</em> for Binary General, 
+          <em>16.6%</em> for Binary Existence-Based, <em>18.4%</em> for Binary Logical, <em>5.2%</em> for Measurement, 
+          <em>17.0%</em> for Object Attributes, <em>0.8%</em> for Object Relations - Functional, <em>18.7%</em> 
+          for Object Relations - Spatial, <em>4.7%</em> for Comparison.
+          Functional Relationships were challenging for LLM to interpret correctly, often leading to inconsistent 
+          or ambiguous answers. As a result, many of these questions were removed during the validation process, 
+          leaving only a small proportion in the final datasets. Due to the low number of these questions, their 
+          inclusion would make comparisons with other categories unreliable. Thus, we exclude them from evaluation.
+        </p>
+    </div>
+    </div>
+  </div>
+</section>
+<!-- End experiments -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
