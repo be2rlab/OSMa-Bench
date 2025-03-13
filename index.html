@@ -191,7 +191,7 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="results-carousel-1" class="carousel results-carousel">
         <div class="item item-steve has-text-centered">
           <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/video_v3_sc1_staging_19_baseline.mp4" type="video/mp4">
@@ -218,7 +218,10 @@
         </div>
       </div>
       <br>
-    <h2 class="subtitle has-text-centered">We applied 4 lighting configurations to <strong>ReplicaCAD</strong> dataset: <em>"Baseline"</em>, <em>"Nominal Lights"</em>, <em>"Camera Light"</em> and <em>"Dynamic Lights"</em> respectively</h2>
+      <h2 class="subtitle has-text-centered">
+        We applied 4 lighting configurations to <strong>ReplicaCAD</strong> dataset: <em>"Baseline"</em>, <em>"Nominal Lights"</em>, 
+        <em>"Camera Light"</em> and <em>"Dynamic Lights"</em> respectively
+      </h2>
     </div>
   </div>
 </section>
@@ -228,26 +231,42 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="results-carousel-1" class="carousel results-carousel">
         <div class="item item-steve has-text-centered">
           <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/video_00808-y9hTuugGdiq_no_lights_2.mp4" type="video/mp4">
+            <source src="static/videos/video_00800-TEEsavR23oF_no_lights_1.mp4" type="video/mp4">
           </video>
           <p id="overlay">Nominal Lights configuration</p>
         </div>
         <div class="item item-steve has-text-centered">
           <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/video_00808-y9hTuugGdiq_camera_lights_2.mp4" type="video/mp4">
+            <source src="static/videos/video_00800-TEEsavR23oF_camera_lights_1.mp4" type="video/mp4">
           </video>
-          <!-- <p id="overlay">Camera Light configuration</p> -->
+          <p id="overlay">Camera Light configuration</p>
+        </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_00800-TEEsavR23oF_no_lights_2.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Nominal Lights configuration</p>
+        </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_00800-TEEsavR23oF_camera_lights_2.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Camera Light configuration</p>
         </div>
       </div>
       <br>
-    <h2 class="subtitle has-text-centered">We applied 2 lighting configurations to <strong>Habitat Matterport 3D</strong> dataset: <em>"Nominal Lights"</em> and <em>"Camera Light"</em> respectively</h2>
+      <h2 class="subtitle has-text-centered">
+        We applied 2 lighting configurations to <strong>Habitat Matterport 3D</strong> dataset: 
+        <em>"Nominal Lights"</em> and <em>"Camera Light"</em> respectively. For each <strong>HM3D</strong> scene we generate 2 different test scenes (trajectories)
+      </h2>
     </div>
   </div>
 </section>
 <!-- End HM3D video carousel -->
+
 
 <!-- VQA part -->
 <section class="container is-small is-light">
@@ -298,7 +317,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <p>
-              We assigned sets of 22 and 8 scenes for ReplicaCAD and HM3D datasets respectively distinct in test conditions' configurations.
+              We assigned sets of 22 and 8 trajectories for ReplicaCAD and HM3D datasets respectively distinct in test conditions' configurations.
             </p>
           </tr>
           <tr>
