@@ -44,22 +44,22 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://github.com/warmhammer" target="_blank">Maxim Popov</a><sup>1*</sup>,</span>
+                <a href="https://github.com/warmhammer" target="_blank">Maxim Popov</a>,</span>
                 <span class="author-block">
-                  <a href="https://github.com/lumalfo" target="_blank">Regina Kurkova</a><sup>1</sup>,</span>
+                  <a href="https://github.com/lumalfo" target="_blank">Regina Kurkova</a>,</span>
                   <span class="author-block">
-                    <a href="https://github.com/MikhailIum" target="_blank">Mikhail Iumanov</a><sup>1</sup>,</span>
+                    <a href="https://github.com/MikhailIum" target="_blank">Mikhail Iumanov</a>,</span>
                     <span class="author-block">
-                      <a href="https://github.com/JaafarMahmoud1" target="_blank">Jaafar Mahmoud</a><sup>1</sup>,</span>
+                      <a href="https://github.com/JaafarMahmoud1" target="_blank">Jaafar Mahmoud</a>,</span>
                       <span class="author-block">
-                        <a href="https://en.itmo.ru/en/viewperson/464/Sergey_Kolyubin.htm" target="_blank">Sergey Kolyubin</a><sup>1</sup>
+                        <a href="https://en.itmo.ru/en/viewperson/464/Sergey_Kolyubin.htm" target="_blank">Sergey Kolyubin</a>
                       </span>
                     </span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="eql-cntrb"><small><sup>*</sup>Indicates Corresponding Author</small></span><br>
+                    <!-- <span class="eql-cntrb"><small><sup>*</sup>Indicates Corresponding Author</small></span><br> -->
                     <span class="author-block">
                       BE2R Lab, ITMO University
                       <!-- <br>Conferance name and year -->
@@ -218,11 +218,17 @@
           </video>
           <p id="overlay">Dynamic Lights configuration</p>
         </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_v3_sc1_staging_19_velocity.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Velocity configuration</p>
+        </div>
       </div>
       <br>
       <h2 class="subtitle has-text-centered">
         We applied 4 lighting configurations to <strong>ReplicaCAD</strong> dataset: <em>"Baseline"</em>, <em>"Nominal Lights"</em>, 
-        <em>"Camera Light"</em> and <em>"Dynamic Lights"</em> respectively
+        <em>"Camera Light"</em> and <em>"Dynamic Lights"</em>. Additionally, we show <em>"Velocity"</em> modifier meaning we recorded sequences at doubled velocity with <em>"Baseline"</em> lighting configuration.
       </h2>
     </div>
   </div>
@@ -236,33 +242,45 @@
       <div id="results-carousel-1" class="carousel results-carousel">
         <div class="item item-steve has-text-centered">
           <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/video_00800-TEEsavR23oF_no_lights_1.mp4" type="video/mp4">
+            <source src="static/videos/video_00800-TEEsavR23oF_no_lights.mp4" type="video/mp4">
           </video>
           <p id="overlay">Nominal Lights configuration</p>
         </div>
         <div class="item item-steve has-text-centered">
           <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/video_00800-TEEsavR23oF_camera_lights_1.mp4" type="video/mp4">
+            <source src="static/videos/video_00800-TEEsavR23oF_camera_lights.mp4" type="video/mp4">
           </video>
           <p id="overlay">Camera Light configuration</p>
         </div>
         <div class="item item-steve has-text-centered">
           <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/video_00800-TEEsavR23oF_no_lights_2.mp4" type="video/mp4">
+            <source src="static/videos/video_00800-TEEsavR23oF_velocity.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Velocity configuration</p>
+        </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_00813-svBbv1Pavdk_no_lights.mp4" type="video/mp4">
           </video>
           <p id="overlay">Nominal Lights configuration</p>
         </div>
         <div class="item item-steve has-text-centered">
           <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/video_00800-TEEsavR23oF_camera_lights_2.mp4" type="video/mp4">
+            <source src="static/videos/video_00813-svBbv1Pavdk_camera_lights.mp4" type="video/mp4">
           </video>
           <p id="overlay">Camera Light configuration</p>
+        </div>
+        <div class="item item-steve has-text-centered">
+          <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/video_00813-svBbv1Pavdk_velocity.mp4" type="video/mp4">
+          </video>
+          <p id="overlay">Velocity configuration</p>
         </div>
       </div>
       <br>
       <h2 class="subtitle has-text-centered">
         We applied 2 lighting configurations to <strong>Habitat Matterport 3D</strong> dataset: 
-        <em>"Nominal Lights"</em> and <em>"Camera Light"</em> respectively. For each <strong>HM3D</strong> scene we generate 2 different test scenes (trajectories)
+        <em>"Nominal Lights"</em> and <em>"Camera Light"</em>. Additionally, we show <em>"Velocity"</em> modifier meaning we recorded sequences at doubled velocity with <em>"Nominal lights"</em> lighting configuration.
       </h2>
     </div>
   </div>
@@ -328,12 +346,12 @@
                 The evaluation was conducted for three methods: ConceptGraphs, OpenScene, and a very recent BBQ. These methods employ 
                 different approaches, so we can perform benchmarking on a wider spectrum. 
                 <br>
-                Obtained results for segmentation quality metrics for all considered methods and scenes are presented in Tables I-III, 
+                Obtained results for segmentation quality metrics for all considered methods and scenes are presented in Tables I-II, 
                 while its relative change (degradation) under different test conditions are illustrated on a ReplicaCAD dataset (less means less robust).
               </p>
             </td>
             <td width="50%">
-              <img src="static/images/degradation_barplot.png">
+              <img src="static/images/change_barplot.png">
             </td>
           </tr>
         </table>
