@@ -45,7 +45,7 @@
 - [ ] Release Augmented ReplicaCAD
 
 ## Citation
-Using ReplicaCAD in your research? Please cite:
+Using OSMa-Bench in your research? Please cite:
 ```bibtex
 @article{popov2025osmabench
     title={OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions},
