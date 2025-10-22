@@ -12,7 +12,7 @@
     <a href="https://en.itmo.ru/en/viewperson/464/Sergey_Kolyubin.htm/"><strong>Sergey Kolyubin</strong></a>
   </p>
   <h2 align="center">IROS 2025</h2>
-  <h3 align="center"><a href="http://arxiv.org/pdf/2503.10331">Paper</a> | <a href="http://arxiv.org/abs/2503.10331">ArXiv</a> | <a href="">Video</a> | <a href="https://be2rlab.github.io/OSMa-Bench/">Project Page</a></h3>
+  <h3 align="center"><a href="http://arxiv.org/pdf/2503.10331">Paper</a> | <a href="http://arxiv.org/abs/2503.10331">ArXiv</a> | <a href="https://youtu.be/HqpZ1gDhvKU">Video</a> | <a href="https://be2rlab.github.io/OSMa-Bench/">Project Page</a></h3>
   <div align="center"></div>
 </p>
 <p align="center">
