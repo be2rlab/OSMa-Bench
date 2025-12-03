@@ -1,0 +1,59 @@
+dataset:
+  name: Generated
+  base_dir: /data/datasets/generated/hm3d
+  sequence: no_lights/00813-svBbv1Pavdk
+  start: 0
+  end: -1
+  stride: 5
+  desired_height: 680
+  desired_width: 1200
+  camera_params:
+    crop_edge: 0
+    cx: 599.5
+    cy: 339.5
+    fx: 600.0
+    fy: 600.0
+    image_height: 680
+    image_width: 1200
+    png_depth_scale: 6553.5
+  relative_pose: false
+  device: cuda
+nodes_constructor:
+  mask_generator:
+    model: MobileSAM
+    weights_path: /home/docker_user/bbq_weights/mobilesamv2/weight
+  dino_generator:
+    model: dinov2_vits14_reg_lc
+    load_size: 448
+    stride: 7
+    facet: value
+    num_patches_h: 63
+    num_patches_w: 113
+  detections_assembler:
+    mask_conf_threshold: 0.95
+    mask_area_threshold: 500
+    max_bbox_area_ratio: 0.75
+    min_points_threshold: 150
+    downsample_voxel_size: 0.025
+    dbscan_remove_noise: true
+    dbscan_eps: 0.05
+    dbscan_min_points: 10
+    image_area: 816000
+  objects_associator:
+    merge_det_obj_spatial_sim_thresh: 0.01
+    merge_det_obj_visual_sim_thresh: 0.5
+    downsample_voxel_size: 0.025
+    merge_interval: 20
+    merge_objects_overlap_thresh: 0.7
+    merge_objects_visual_sim_thresh: 0.4
+  projector:
+    num_views: 5
+    top_k: 1
+    desired_height: 680
+    desired_width: 1200
+  postprocessing:
+    obj_min_points: 150
+    obj_min_detections: 3
+  output_path: /home/docker_user/BeyondBareQueries/output/scenes/hm3d
+  output_name_nodes: no_lights_00813-svBbv1Pavdk.json
+  output_name_objects: no_lights_00813-svBbv1Pavdk.pkl.gz

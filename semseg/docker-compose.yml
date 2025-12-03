@@ -1,0 +1,77 @@
+services:
+  bbq:
+    build:
+      context: $MKFILE_DIR/
+      dockerfile: $MKFILE_DIR/docker/bbq.Dockerfile
+    image: open_semantic/bbq:latest
+    restart: unless-stopped
+    network_mode: host
+    ipc: host
+    environment:
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - DISPLAY=$DISPLAY
+      - VGL_DISPLAY=${RENDER_DISPLAY:-":1"}
+    volumes:
+      - /tmp/.X11-unix/:/tmp/.X11-unix
+      - $ROOT_DIR/:/home/docker_user/BeyondBareQueries
+      - $DATA_DIR:/data/
+      - $MKFILE_DIR/export:/export/
+      - $MKFILE_DIR/scripts:/scripts/
+      - $MKFILE_DIR/results:/results/
+    runtime: nvidia
+    privileged: true
+    command: bash
+
+  concept_graphs:
+    build:
+      context: $MKFILE_DIR/
+      dockerfile: $MKFILE_DIR/docker/concept_graphs.Dockerfile
+    image: open_semantic/concept_graphs:latest
+    restart: unless-stopped
+    network_mode: host
+    ipc: host
+    environment:
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - DISPLAY=$DISPLAY
+      - VGL_DISPLAY=${RENDER_DISPLAY:-":1"}
+    volumes:
+      - /tmp/.X11-unix/:/tmp/.X11-unix
+      - $ROOT_DIR:/home/docker_user/ConceptGraphs
+      - $DATA_DIR:/data/
+      - $MKFILE_DIR/export:/export/
+      - $MKFILE_DIR/scripts:/scripts/
+      - $MKFILE_DIR/results:/results/
+    runtime: nvidia
+    privileged: true
+    command: bash
+
+  openscene:
+    build:
+      context: $MKFILE_DIR/
+      dockerfile: $MKFILE_DIR/docker/openscene.Dockerfile
+    image: open_semantic/openscene:latest
+    restart: unless-stopped
+    network_mode: host
+    ipc: host
+    environment:
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - DISPLAY=$DISPLAY
+      - VGL_DISPLAY=${RENDER_DISPLAY:-":1"}
+    volumes:
+      - /tmp/.X11-unix/:/tmp/.X11-unix
+      - $ASSETS_DIR/:/assets/
+      - $ROOT_DIR/:/home/docker_user/OpenScene
+      - $DATA_DIR:/data/
+      - $MKFILE_DIR/export:/export/
+      - $MKFILE_DIR/scripts:/scripts/
+      - $MKFILE_DIR/results:/results/
+    runtime: nvidia
+    privileged: true
+    command: bash
+    

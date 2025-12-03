@@ -1,0 +1,41 @@
+## Python files
+__pycache__
+.cache
+.ipynb_checkpoints
+.venv
+*.egg-info
+*.pyc
+
+## Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+## Visuals
+/notebooks/video/
+/plots/
+/results/visuals/
+
+## Approaches
+approaches/BeyondBareQueries/build/
+approaches/BeyondBareQueries/output/
+approaches/BeyondBareQueries/output.mp4
+
+approaches/ConceptGraphs/checkpoints/
+approaches/ConceptGraphs/outputs/
+approaches/ConceptGraphs/yolov8l-world.pt
+
+approaches/HOV-SG/data/
+approaches/HOV-SG/outputs/
+
+approaches/OpenScene/output/
+
+approaches/OpenYOLO3D/data/
+approaches/OpenYOLO3D/OpenYOLO3D/
+approaches/OpenYOLO3D/pretrained/checkpoints/
+approaches/OpenYOLO3D/models/YOLO-World/yolo_world/work_dirs/

@@ -1,0 +1,59 @@
+dataset:
+  base_dir: /data/datasets/generated/replica_cad
+  desired_height: 680
+  desired_width: 1200
+  camera_params:
+    crop_edge: 0
+    cx: 599.5
+    cy: 339.5
+    fx: 600.0
+    fy: 600.0
+    image_height: 680
+    image_width: 1200
+    png_depth_scale: 6553.5
+  device: cuda
+  end: -1
+  name: Generated
+  relative_pose: false
+  sequence: no_lights/v3_sc3_staging_03
+  start: 0
+  stride: 5
+nodes_constructor:
+  detections_assembler:
+    dbscan_eps: 0.05
+    dbscan_min_points: 10
+    dbscan_remove_noise: true
+    downsample_voxel_size: 0.025
+    image_area: 816000
+    mask_area_threshold: 500
+    mask_conf_threshold: 0.95
+    max_bbox_area_ratio: 0.75
+    min_points_threshold: 150
+  dino_generator:
+    facet: value
+    load_size: 448
+    model: dinov2_vits14_reg_lc
+    num_patches_h: 63
+    num_patches_w: 113
+    stride: 7
+  mask_generator:
+    model: MobileSAM
+    weights_path: /home/docker_user/bbq_weights/mobilesamv2/weight
+  objects_associator:
+    downsample_voxel_size: 0.025
+    merge_det_obj_spatial_sim_thresh: 0.01
+    merge_det_obj_visual_sim_thresh: 0.5
+    merge_interval: 20
+    merge_objects_overlap_thresh: 0.7
+    merge_objects_visual_sim_thresh: 0.4
+  output_name_nodes: no_lights_v3_sc3_staging_03.json
+  output_name_objects: no_lights_v3_sc3_staging_03.pkl.gz
+  output_path: /home/docker_user/BeyondBareQueries/output/scenes/replica_cad
+  postprocessing:
+    obj_min_detections: 3
+    obj_min_points: 150
+  projector:
+    desired_height: 680
+    desired_width: 1200
+    num_views: 5
+    top_k: 1

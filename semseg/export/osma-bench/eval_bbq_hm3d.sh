@@ -1,0 +1,53 @@
+#!/bin/bash
+
+export SCENE_NAMES=(
+00800-TEEsavR23oF
+00802-wcojb4TFT35
+00803-k1cupFYWXJ6
+00808-y9hTuugGdiq
+00810-CrMo8WxCyVb
+00813-svBbv1Pavdk
+00814-p53SfW6mjZe
+00815-h1zeeAwLh9Z
+)
+
+export SCENE_LABELS=(
+camera_lights
+no_lights
+velocity
+)
+
+for scene_name in ${SCENE_NAMES[*]}
+do
+    for scene_label in ${SCENE_LABELS[*]}
+    do
+        printf "Evaluating label/scene:   %s\n" "${scene_label}/${scene_name}"
+
+        python3 /scripts/adaptors/bbq.py \
+            --config_path=/home/docker_user/BeyondBareQueries/examples/configs/hm3d/${scene_label}_${scene_name}.yaml \
+            --output_name=${scene_label}_${scene_name}_with_feats.pkl.gz
+
+        python /scripts/eval_semseg.py \
+            --approach 'bbq' \
+            --semantic_info_path "/data/datasets/generated/hm3d/${scene_label}/${scene_name}/embed_semseg_classes.json" \
+            --scene_label_set \
+            --excluded_classes "0" \
+            --pred_pc_path "/home/docker_user/BeyondBareQueries/output/scenes/hm3d/${scene_label}_${scene_name}_with_feats.pkl.gz" \
+            --gt_pc_path "/data/gt/generated/hm3d/no_lights/${scene_name}/pointcloud.pcd" \
+            --output_path "/results/osma-bench/bbq/hm3d/${scene_label}" \
+            --result_tag "${scene_name}" \
+            --clip_prompts "an image of {}" \
+            --clip_name "EVA02-B-16" \
+            --clip_pretrained "merged2b_s8b_b131k" \
+            --nn_count 1
+    done
+done
+
+for scene_label in ${SCENE_LABELS[*]}
+do
+    printf "Metrics for label:   %s\n" "${scene_label}"
+
+    python /scripts/compute_metrics.py \
+        --results_dir "/results/osma-bench/bbq/hm3d/${scene_label}/" \
+        --excluded "-1 0"
+done

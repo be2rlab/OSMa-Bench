@@ -1,0 +1,37 @@
+DATA:
+  data_root: /home/docker_user/OpenScene/output/hm3d/replica_3d          # path to 3d data (.pth files)
+  data_root_2d_fused_feature: /home/docker_user/OpenScene/output/hm3d/fusion # path to fused features
+  feature_2d_extractor: openseg                          # model used for 2D feature extraction 
+  classes: 365                                           # number of classes in Replica
+  voxel_size: 0.02                                       
+  use_shm: False                                         # using shared memory 
+  aug: False                                             # using augmentation while distilling 
+
+
+TEST:
+  split: test                                            # split in [train, val and test]
+  prompt_eng: True                                       # input class name X -> "a X in a scene"
+  mark_no_feature_to_unknown: False
+  feature_type: 'ensemble'                               # 'distill' (only 3D semantic) | 'fusion' (only 2D semantic) | 'ensemble' (2D + 3D)
+  save_feature_as_numpy: True                            # save the per-point features as .npy
+  vis_input: False                                        # Saving input point clouds for visualization
+  vis_pred: False                                         # Saving point clouds with predicted semantic labels for visualization
+  vis_gt: True                                           # Saving point clouds with GT semantic labels for visualization
+  labelset: hm_3d                                         # Evaluate on a specific pre-defined labelset in label_constants.py
+  test_workers: 8
+  test_gpu: [0]
+  test_batch_size: 5
+  model_path: 'https://cvg-data.inf.ethz.ch/openscene/models/matterport_openseg.pth.tar' # distillation model path
+  save_folder:
+  eval_iou: False                                         # whether evaluating the mIoU. Set to False if there is no GT labels
+  metric_save_path: "/data/results"
+  test_repeats: 1
+  arch_3d: MinkUNet18A
+  manual_seed: 3407
+
+Distributed:
+  dist_url: tcp://127.0.0.1:6787
+  dist_backend: 'nccl'
+  multiprocessing_distributed: True
+  world_size: 1
+  rank: 0

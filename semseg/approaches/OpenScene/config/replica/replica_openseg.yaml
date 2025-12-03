@@ -1,0 +1,58 @@
+DATA:
+  data_root: /data/openscene/replica/replica_3d          # path to 3d data (.pth files)
+  data_root_2d_fused_feature: /data/openscene/replica/fusion_train  # path to fused features
+  feature_2d_extractor: openseg                          # model used for 2D feature extraction 
+  classes: 102                                           # number of classes in Replica
+  voxel_size: 0.02                                       
+  use_shm: False                                         # using shared memory 
+  aug: False                                             # using augmentation while distilling 
+
+DISTILL:
+  arch_3d: MinkUNet18A                                   # MinkowskiNet architecture for distillation
+  ignore_label: 255                                      # label of "unknown" objects
+  train_gpu: [0]
+  workers: 2                                             # data loader workers
+  batch_size: 2                                          # batch size for training
+  batch_size_val: 0                                      # batch size for validation during training, memory and speed tradeoff
+  base_lr: 0.0001
+  loss_type: cosine                                      # l1 | cosine
+  loop: 5  
+  epochs: 100
+  start_epoch: 0
+  power: 0.9
+  momentum: 0.9
+  manual_seed: 3407
+  print_freq: 1                                          # how often log info is printed
+  save_freq: 1 
+  save_path:
+  resume:
+  evaluate: False                                        # evaluate on validation set, extra gpu memory needed and small batch_size_val is recommend
+  eval_freq: 0
+
+
+TEST:
+  split: test                                            # split in [train, val and test]
+  prompt_eng: True                                       # input class name X -> "a X in a scene"
+  mark_no_feature_to_unknown: True
+  feature_type: 'ensemble'                               # 'distill' (only 3D semantic) | 'fusion' (only 2D semantic) | 'ensemble' (2D + 3D)
+  save_feature_as_numpy: True                            # save the per-point features as .npy
+  vis_input: True                                        # Saving input point clouds for visualization
+  vis_pred: True                                         # Saving point clouds with predicted semantic labels for visualization
+  vis_gt: True                                           # Saving point clouds with GT semantic labels for visualization
+  labelset: replica                                      # Evaluate on a specific pre-defined labelset in label_constants.py
+  test_workers: 8
+  test_gpu: [0]
+  test_batch_size: 1
+  model_path: '/data/models/replica/model/model_last.pth.tar' # distillation model path
+  save_folder:
+  eval_iou: True                                         # whether evaluating the mIoU. Set to False if there is no GT labels
+  test_repeats: 1
+  arch_3d: MinkUNet18A
+  manual_seed: 3407
+
+Distributed:
+  dist_url: tcp://127.0.0.1:6787
+  dist_backend: 'nccl'
+  multiprocessing_distributed: True
+  world_size: 1
+  rank: 0
