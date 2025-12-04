@@ -84,10 +84,14 @@ For detailed instructions on setup, execution, and workflow, please refer to the
 ## Citation
 Using OSMa-Bench in your research? Please cite:
 ```bibtex
-@article{popov2025osmabench,
-    title={OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions},
-    author={Popov, Maxim and Kurkova, Regina and Iumanov, Mikhail and Mahmoud, Jaafar and Kolyubin, Sergey},
-    journal={arXiv preprint arXiv:2503.10331},
-    year={2025}
-}
+@INPROCEEDINGS{11247603,
+  author={Popov, Maxim and Kurkova, Regina and Iumanov, Mikhail and Mahmoud, Jaafar and Kolyubin, Sergey},
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={10786-10791},
+  keywords={Adaptation models;Visualization;Three-dimensional displays;Heuristic algorithms;Semantic segmentation;Semantics;Pipelines;Lighting;Benchmark testing;Robustness},
+  doi={10.1109/IROS60139.2025.11247603}}
 ```
