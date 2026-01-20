@@ -1,2 +1,10 @@
 __pycache__/
 *.pyc
+
+/data
+/evaluated
+/graphs
+/output
+
+*.rar
+*.zip

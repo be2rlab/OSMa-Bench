@@ -2,6 +2,7 @@ import json
 import re
 from collections import Counter
 
+
 def extract_single_category_prompt(full_prompt: str, target_category: str) -> str:
     """
     Extract the JSON block from the full prompt and keep only the target category.
@@ -23,6 +24,7 @@ def extract_single_category_prompt(full_prompt: str, target_category: str) -> st
         print(f"[!] Error parsing qa_generation_prompt: {e}")
         raise
 
+
 # mapping English numerals to digits
 DIGIT_MAP = {
     "zero": "0", "one": "1", "two": "2", "three": "3",  "four": "4",
@@ -30,8 +32,10 @@ DIGIT_MAP = {
     "ten": "10"
 }
 
+
 # regex to catch too-generic spatial relations
 GENERIC_SPATIAL = re.compile(r"\b(on|at|in|on the|on a) (wall|floor|ceiling)\b", re.I)
+
 
 def is_yes_no_answer(answer: str) -> bool:
     """
@@ -39,11 +43,13 @@ def is_yes_no_answer(answer: str) -> bool:
     """
     return str(answer).strip().lower() in {"yes", "no"}
 
+
 def is_numeric_answer(answer: str) -> bool:
     """
     Return True if the answer is a pure integer or float string.
     """
     return re.match(r"^\d+(\.\d+)?$", str(answer).strip()) is not None
+
 
 def infer_answer_type(answer: str) -> str:
     """
@@ -52,9 +58,18 @@ def infer_answer_type(answer: str) -> str:
     a = str(answer).strip().lower()
     if a in {"yes", "no"}:
         return "boolean"
-    if is_numeric_answer(a):
+    elif is_numeric_answer(a) and is_int(a):
         return "numeric"
     return "text"
+
+
+def is_int(s: str) -> bool:
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
 
 def build_scene_inventory(desc_dict: dict) -> Counter:
     """

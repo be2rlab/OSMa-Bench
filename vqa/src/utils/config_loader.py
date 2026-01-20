@@ -1,29 +1,63 @@
-"""
-Configuration loader for YAML files.
-"""
 import yaml
-import os
+from pydantic import BaseModel
+from pathlib import Path
 
-class Configuration:
-    """
-    Loads configuration from a YAML file or dictionary entries.
-    """
-    def __init__(self, yaml_path: str = None, **entries):
-        if yaml_path:
-            if not os.path.exists(yaml_path):
-                raise FileNotFoundError(f"YAML file '{yaml_path}' not found.")
-            with open(yaml_path, "r", encoding="utf-8") as file:
-                data = yaml.safe_load(file)
-            self._load_data(data)
-        else:
-            self._load_data(entries)
 
-    def _load_data(self, data: dict):
-        for key, value in data.items():
-            # If the value is a nested dict, convert to Configuration
-            if isinstance(value, dict):
-                value = Configuration(**value)
-            setattr(self, key, value)
+class FoundationModel(BaseModel):
+    api_name: str
+    api_key: str = None
+    model: str = None
+    llm: str = None
+    lvlm: str = None
 
-    def __repr__(self) -> str:
-        return f"{self.__class__.__name__}({self.__dict__})"
+
+class DescriptionGeneration(BaseModel):
+    prompt: str
+    rejection_keyword: str
+    pos_threshold: float = 1.5
+    angle_threshold: float = 10.0
+    
+    
+class QAGeneration(BaseModel):
+    prompt: str
+
+
+class QAValidation(BaseModel):
+    neural_val_prompt: str
+    filter_non_objects_prompt: str
+
+
+class CGAnswering(BaseModel):
+    prompt: str
+    batch_size: int = 10
+    
+class Evaluation(BaseModel):
+    prompt: str
+    batch_size: int = 10
+
+
+
+class Configuration(BaseModel):
+    foundation_model: FoundationModel
+    
+    description_generation: DescriptionGeneration
+    qa_generation: QAGeneration
+    qa_validation: QAValidation
+
+    cg_answering: CGAnswering
+    
+    evaluation: Evaluation
+    
+    data_dir: Path
+    output_dir: Path
+
+
+def load_configuration(yaml_path, **entries):
+    with open(yaml_path) as f:
+        data = yaml.safe_load(f)
+        
+    data.update(entries)
+
+    config = Configuration(**data)
+    
+    return config

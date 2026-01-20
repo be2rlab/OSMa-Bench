@@ -1,144 +1,151 @@
 import argparse
-import base64
-import os
-import shutil
-import time
 import logging
+import os
 
 import numpy as np
+import scipy.spatial.transform as sst
 from tqdm import tqdm
 
-from src.config import Configuration
+from src.models import create_foundation_model
 from src.utils.api import post_with_retry
+from src.utils.config_loader import load_configuration
 from src.utils.json_utils import save_json
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(levelname)s %(message)s"
-)
+
 logger = logging.getLogger(__name__)
 
-def encode_image(image_path):
-    """Reads and encodes an image as base64."""
-    with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode("utf-8")
+
+def get_parser_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("config_path", help="Path to the YAML config.")
+    parser.add_argument("--scene", required=True, help="Name of the scene folder.")
+    parser.add_argument("--manual", action="store_true",
+                        help="Use manual frames instead of automatic selection.")
+    
+    args = parser.parse_args()
+    
+    return args
 
 
-def analyze_trajectory(traj_path):
-    """Analyzes camera trajectory; returns positions, orientations, adaptive frame_step, and scene size."""
-    positions, orientations = [], []
-    with open(traj_path, 'r') as file:
-        for line in file:
-            vals = list(map(float, line.split()))
-            # positions (x, y, z)
-            positions.append(vals[3:6])
-            # orientation data
-            orientations.append(vals[:3] + vals[6:9] + vals[9:12])
+def get_pathes(base_dir, scene_name):
+    results_dir = os.path.join(base_dir, scene_name, "results")
+    traj_path   = os.path.join(base_dir, scene_name, "traj.txt")
+    vqa_dir     = os.path.join(base_dir, scene_name, "vqa")
 
-    positions = np.array(positions)
-    min_pos, max_pos = positions.min(axis=0), positions.max(axis=0)
-    scene_size = np.linalg.norm(max_pos - min_pos)
-
-    # Adaptive step
-    frame_step = max(50, int(scene_size * 20))
-    return np.array(positions), np.array(orientations), frame_step, scene_size
+    os.makedirs(vqa_dir, exist_ok=True)
+    
+    return results_dir, traj_path, vqa_dir
 
 
-def compute_view_difference(pos1, pos2, ori1, ori2, pos_threshold=0.5, angle_threshold=10):
+def load_traj(traj_path):
+    traj = np.loadtxt(traj_path)
+    matrices = traj.reshape(-1, 4, 4)
+    
+    return matrices
+
+
+def check_view_similarity(lhs_pose, rhs_pose, pos_threshold, angle_threshold):
     """
     Checks if two camera frames are 'too similar' based on position + orientation.
     """
-    pos_diff = np.linalg.norm(pos1 - pos2)
+    pos_diff = np.linalg.norm(lhs_pose[:3, -1] - rhs_pose[:3, -1])
+    
+    lhs_rot = sst.Rotation.from_matrix(lhs_pose[:3, :3])
+    rhs_rot = sst.Rotation.from_matrix(rhs_pose[:3, :3])
 
-    # Normalize orientation vectors
-    ori1_norm = np.linalg.norm(ori1[:3])
-    ori2_norm = np.linalg.norm(ori2[:3])
-    if ori1_norm == 0 or ori2_norm == 0:
-        return False  # fallback if something is off
+    relative_rot = lhs_rot * rhs_rot.inv()
+    angle_diff = relative_rot.magnitude()     
 
-    ori1_unit = ori1[:3] / ori1_norm
-    ori2_unit = ori2[:3] / ori2_norm
-
-    cos_angle = np.dot(ori1_unit, ori2_unit)
-    angle = np.degrees(np.arccos(np.clip(cos_angle, -1.0, 1.0)))
-
-    return (pos_diff < pos_threshold) and (angle < angle_threshold)
+    return (pos_diff < pos_threshold) and (angle_diff < angle_threshold)
 
 
-def select_frames(scene_dir, traj_path, vqa_dir):
+def select_frames(frames_dir, traj_path, pos_threshold, angle_threshold):
     """
-    Selects frames from scene_dir, skipping similar viewpoints,
-    and saves them into vqa_dir/true_frames and vqa_dir/false_frames.
+    Selects frames from scene_dir, skipping similar viewpoints.
     """
-    os.makedirs(vqa_dir, exist_ok=True)
+    all_frames = sorted(
+        os.path.join(frames_dir, f) for f in os.listdir(frames_dir) if f.endswith(".jpg")
+    )
+    camera_poses = load_traj(traj_path)
+    assert len(all_frames) == camera_poses.shape[0]
+    
+    # trans = camera_poses[:, :3, -1] 
+    # scene_size = np.linalg.norm(trans.min(axis=0) - trans.max(axis=0))
+    # frame_step = max(50, int(scene_size * 20)) # Adaptive step
+    # frame_step = 1 # to remove
 
-    true_frames_dir = os.path.join(vqa_dir, "true_frames")
-    false_frames_dir = os.path.join(vqa_dir, "false_frames")
-    os.makedirs(true_frames_dir, exist_ok=True)
-    os.makedirs(false_frames_dir, exist_ok=True)
-
-    all_frames = sorted(f for f in os.listdir(scene_dir) if f.endswith(".jpg"))
-    positions, orientations, frame_step, scene_size = analyze_trajectory(traj_path)
-
-    logger.info("Scene size: %.2f; using frame step = %d", scene_size, frame_step)
+    # logger.info("Scene size: %.2f; using frame step = %d", scene_size, frame_step)
 
     selected_frames = []
-    final_positions = []
-    final_orientations = []
+    final_poses = []
 
-    for i in range(0, len(all_frames), frame_step):
-        if i >= len(positions):
-            break
-
+    for i in range(0, len(all_frames)):
         frame = all_frames[i]
-        pos1 = positions[i]
-        ori1 = orientations[i]
+        cur_pose = camera_poses[i]
 
-        if any(compute_view_difference(pos1, p, ori1, o) for p, o in zip(final_positions, final_orientations)):
+        if any(check_view_similarity(cur_pose, pose, pos_threshold, angle_threshold) for pose in final_poses):
             logger.debug("Frame %s excluded (similar to previous).", frame)
-            shutil.copy(os.path.join(scene_dir, frame), os.path.join(false_frames_dir, frame))
             continue
 
         selected_frames.append(frame)
-        final_positions.append(pos1)
-        final_orientations.append(ori1)
-        shutil.copy(os.path.join(scene_dir, frame), os.path.join(true_frames_dir, frame))
+        final_poses.append(cur_pose)
 
     logger.info("Selected %d frames out of %d total.", len(selected_frames), len(all_frames))
 
-    return selected_frames, np.array(final_positions), np.array(final_orientations)
+    return selected_frames, np.array(final_poses)
 
 
-def generate_description_gemini(config, image_path):
-    time.sleep(2)
-    api_url = f"{config.url}/{config.vlm}:generateContent?key={config.gemini_api_key}"
-    prompt = config.gemini_scene_prompt.replace("{rejection_keyword}", config.rejection_keyword)
+def get_frames_pathes(frames_dir=None, traj_path=None, manual_dir=None, pos_threshold=None, angle_threshold=None):
+    if manual_dir is not None:       
+        if not os.path.isdir(manual_dir):
+            raise FileNotFoundError(f"Manual selected frames directory not found: {manual_dir}")
+        
+        selected_frames = sorted(
+            os.path.join(manual_dir, f) for f in os.listdir(manual_dir) if f.endswith(".jpg")
+        )
+        
+        poses = None
+        
+        logger.info("Using manual frames from %s", manual_dir)
+    elif frames_dir is not None or traj_path is not None:           
+        # automatic selection via trajectory
+        selected_frames, poses = select_frames(frames_dir, traj_path, pos_threshold, angle_threshold)
+        
+        logger.info("Frames selection is completed")
+    else:
+        raise ValueError("frames_dir and traj_path or manual_dir must not be None")
+        
+    return selected_frames, poses
 
-    payload = {
-        "contents": [{
-            "parts": [
-                {"text": prompt},
-                {"inlineData": {
-                    "mimeType": "image/jpeg",
-                    "data": encode_image(image_path)
-                }}
-            ]
-        }]
-    }
 
-    response = post_with_retry(api_url, payload)
+def describe_image(foundation_model, image_path, prompt, rejection_keyword):
+    prompt = prompt.replace("{rejection_keyword}", rejection_keyword)
 
-    if response is None:
-        return config.rejection_keyword
+    answer = post_with_retry(foundation_model, prompt=prompt, images=[image_path])
 
-    return response.json().get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
+    if answer is None:
+        return rejection_keyword
+
+    return answer
+
+
+def generate_descriptions(foundation_model, selected_frames, prompt, rejection_keyword):
+    descriptions = {}
+    for image_path in tqdm(selected_frames, desc="Generating descriptions"):
+        descriptions[image_path] = describe_image(
+            foundation_model = foundation_model, 
+            image_path = image_path,
+            prompt = prompt, 
+            rejection_keyword = rejection_keyword
+        )
+        
+    return descriptions
 
 
 def save_scene_data(output_path,
                     scene_name,
                     selected_frames,
-                    positions=None,
-                    orientations=None,
+                    poses=None,
                     descriptions=None,
                     rejection_keyword=None):
     """
@@ -150,20 +157,19 @@ def save_scene_data(output_path,
 
     for idx, frame in enumerate(selected_frames):
         desc = descriptions.get(frame, rejection_keyword)
-        if rejection_keyword and rejection_keyword in desc:
+        if rejection_keyword is not None and rejection_keyword in desc:
             logger.debug("Frame %s excluded (scene blocked).", frame)
             continue
 
         entry = {
             "frame": frame,
-            "description": desc
+            "description": desc.strip()
         }
 
-        # Include camera info if available
-        if positions is not None and orientations is not None:
+        if poses is not None:
             entry["camera"] = {
-                "position": positions[idx].tolist(),
-                "orientation": orientations[idx].tolist()
+                "position": poses[idx, :3, -1].tolist(),
+                "orientation": sst.Rotation.from_matrix(poses[idx, :3, :3]).as_quat().tolist()
             }
 
         scene_data["parameters"].append(entry)
@@ -172,51 +178,46 @@ def save_scene_data(output_path,
     logger.info("Scene description saved to: %s", output_path)
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("config_path", help="Path to the YAML config.")
-    parser.add_argument("--scene", required=True, help="Name of the scene folder.")
-    parser.add_argument("--manual", action="store_true",
-                        help="Use manual frames instead of automatic selection.")
-    args = parser.parse_args()
-
-    config = Configuration(yaml_path=args.config_path)
-    base = config.base_scenes_dir
-    scene = args.scene
-    scene_dir = os.path.join(base, scene, "results")
-    traj_path = os.path.join(base, scene, "traj.txt")
-    vqa_dir = os.path.join(base, scene, "vqa")
-
-    os.makedirs(vqa_dir, exist_ok=True)
-
-    if args.manual or not os.path.isfile(traj_path):
-        manual_dir = os.path.join(vqa_dir, "manual_frames")
-        if not os.path.isdir(manual_dir):
-            raise FileNotFoundError(f"Manual frames directory not found: {manual_dir}")
-        # use frames placed manually
-        selected_frames = sorted(f for f in os.listdir(manual_dir) if f.endswith(".jpg"))
-        positions = orientations = None
-        frames_source_dir = manual_dir
-        logger.info("Using manual frames from %s", manual_dir)
-    else:
-        # automatic selection via trajectory
-        selected_frames, positions, orientations = select_frames(scene_dir, traj_path, vqa_dir)
-        frames_source_dir = scene_dir
-
-    descriptions = {}
-    for frame in tqdm(selected_frames, desc="Generating descriptions"):
-        image_path = os.path.join(frames_source_dir, frame)
-        descriptions[frame] = generate_description_gemini(config, image_path)
-
-    output_json = os.path.join(vqa_dir, f"{args.scene}_descriptions.json")
+def main():  
+    args = get_parser_args()
+    
+    config = load_configuration(yaml_path=args.config_path)
+    
+    results_dir, traj_path, vqa_dir = get_pathes(
+        base_dir=config.data_dir, scene_name=args.scene
+    )
+        
+    model_conf = config.foundation_model
+    foundation_model = create_foundation_model(
+        api_name = model_conf.api_name,
+        api_key = model_conf.api_key,
+        model = model_conf.model,
+        llm = model_conf.llm,
+        lvlm = model_conf.lvlm,
+        )
+    
+    gen_config = config.description_generation
+    selected_frames, poses = get_frames_pathes(
+        frames_dir=results_dir, 
+        traj_path=traj_path,
+        pos_threshold = gen_config.pos_threshold, 
+        angle_threshold = gen_config.angle_threshold
+    )
+    
+    descriptions = generate_descriptions(
+        foundation_model = foundation_model, 
+        selected_frames = selected_frames, 
+        prompt = gen_config.prompt, 
+        rejection_keyword = gen_config.rejection_keyword
+    )
+    
     save_scene_data(
-        output_json,
-        args.scene,
-        selected_frames,
-        positions,
-        orientations,
-        descriptions,
-        config.rejection_keyword
+        output_path = os.path.join(vqa_dir, f"{args.scene}_descriptions.json"),
+        scene_name = args.scene,
+        selected_frames = selected_frames,
+        poses = poses,
+        descriptions = descriptions,
+        rejection_keyword = gen_config.rejection_keyword
     )
 
 

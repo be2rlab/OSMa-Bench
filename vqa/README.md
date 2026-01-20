@@ -1,100 +1,58 @@
-# 3D-Scene QA Pipeline
+# Visual Question Answering
 
-Main contributor: <a href="https://github.com/lumalfo/"><strong>Regina Kurkova</strong></a>
+Main contributer: <a href="https://github.com/lumalfo/"><strong>Regina Kurkova</strong></a>\
+Refactored by: <a href="https://warmhammer.github.io/"><strong>Maxim Popov</strong></a>
 
-> End-to-end pipeline that  
-> 1. selects frames from a simulation 
-> 2. generates dense scene descriptions
-> 3. auto-creates QA pairs
-> 4. validates / de-duplicates them
-> 5. answers questions with a scene-graph
-> 6. evaluates the whole run with accuracy metrics.
+<p align="center">
+  <a href="">
+    <img src="https://be2rlab.github.io/OSMa-Bench/static/images/vqa_pipeline.png" alt="VQA Pipeline" width="100%">
+  </a>
+</p>
+<p align="center">
+</p>
 
----
 
-## Repository layout
+This repository contains a pipeline for generating, validating, and answering scene-based questions using scene graphs. The process is organized into three main steps: **generation**, **scene graph answering**, and **evaluation**. This dataset is part of [OSMa-Bench](https://be2rlab.github.io/OSMa-Bench/) pipeline.
 
-```
-src/
-├── config.py                     # simple YAML → object loader
-├── generation/                   # ⇣ Stage-1 : data generation
-│   ├── text_desc_generation.py
-│   └── qa_generation.py
-├── validation/                   # ⇣ Stage-2 : QA validation
-│   ├── qa_validation.py
-│   └── validation_utils.py   
-└── evaluation/
-    └── scene_graph_answering.py  # ⇣ Stage-3 : answer via graph
-    └── graph_evaluation.py       # ⇣ Stage-4 : compute metrics
-utils/
-├── api.py            # post_with_retry, request_gemini, …
-├── json_utils.py     # load_json, save_json, clean_json_response, …
-└── parsing.py        # tiny helpers (infer_answer_type, etc.)
-run_pipeline.sh       # one-click launcher
-config/gemini_qa.yml  # central YAML with prompts & API keys
-```
+## Installation
 
----
+You can run VQA module generation using either **Gemini API** or the **Ollama**.
+To use Ollama, follow the official [installation guide](https://ollama.com/download).
 
-## Configuration (`config/gemini_qa.yml`)
-
-| key | meaning |
-|-----|---------|
-| `vlm_prompt`, `llm_prompt` | high-level system prompts |
-| `gemini_api_key`, `url`, `vlm`, `llm` | Gemini API settings |
-| `qa_generation_prompt`, `validation_prompt` | prompts used internally |
-| `base_scenes_dir` | root for every scene (`./data` by default) |
-| `rejection_keyword` | special token that marks a frame as “blocked” |
-| `frame_step`, `selection_threshold` | heuristics for frame sampling |
-
----
-
-## Stage 1 · Generation
-
-| script | role |
-|--------|------|
-| `text_desc_generation.py` | parses `traj.txt`, selects frames, queries VLM, generates `<scene>_descriptions.json` |
-| `qa_generation.py` | builds object inventory, queries LLM for QAs, writes `<scene>_questions.json` |
-
-Manual mode:
-```bash
-python -m src.generation.text_desc_generation config/gemini_qa.yml \
-       --scene my_scene --manual
-```
-
----
-
-## Stage 2 · Validation
-
-→ Produces: `<scene>_validated_questions.json`
-
-Logs:
-```
-vqa/validation_process.log
-vqa/removed_questions.log
-vqa/filtered_objects_{before,after}.txt
-```
-
----
-
-## Stage 3 · Scene-graph answering
+Install the required dependencies:
 
 ```bash
-python -m src.scene_graph_answering \
-       -c config/gemini_qa.yml \
-       --questions data/<scene>/vqa/<scene>_validated_questions.json \
-       --graph     graphs/<scene>/scene_graph.json \
-       --output    output/<scene>_answered.json
+pip install -r requirements.txt   # Recommended to run inside a conda environment
 ```
 
-This sends the scene graph and QA in batches to Gemini and appends a `"scene_graph_answer"`.
+## Pipeline Overview
 
----
+For each scene in the dataset, the pipeline executes these steps:
 
-## Stage 4 · Evaluation
+1. **Generation:** Descriptions → QA → Validation
+2. **Scene Graph Answering**
+3. **Evaluation**
 
-`evaluation/graph_evaluation.py`:
+## Running the Pipeline
 
-- Exact match for yes/no and numbers  
-- LLM-based judging for other answers  
-- Produces `evaluated/<scene>.json` + metrics in `evaluated/metrics.csv`
+To run the full pipeline, simply execute:
+
+```bash
+bash run_pipeline.sh
+```
+
+This script processes all scenes sequentially.
+If you want to run individual steps, please follow the structure of the run_pipeline.sh file.
+
+## Citing VQA
+
+Using VQA in your research? Please cite following paper: [arxiv](https://arxiv.org/abs/2503.10331).
+
+```bibtex
+@inproceedings{popov2025osmabench,
+    title     = {OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions},
+    author    = {Popov, Maxim and Kurkova, Regina and Iumanov, Mikhail and Mahmoud, Jaafar and Kolyubin, Sergey},
+    booktitle = {2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+    year      = {2025}
+}
+```

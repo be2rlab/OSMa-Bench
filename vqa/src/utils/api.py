@@ -1,30 +1,19 @@
+import logging
 import time
-import requests
 
-def post_with_retry(url, payload, max_retries=5, delay_seconds=10):
-    """
-    Post JSON payload to URL with retries on 429/503 status.
-    """
-    for attempt in range(max_retries):
-        try:
-            response = requests.post(url, json=payload)
-        except Exception as e:
-            print(f"Request exception: {e}")
-            time.sleep(delay_seconds)
-            continue
+logger = logging.getLogger(__name__)
 
-        if response.status_code == 200:
-            return response
-        if response.status_code in (429, 503):
-            print(f"Server busy (status {response.status_code}), retrying in {delay_seconds} seconds "
-                  f"(attempt {attempt+1}/{max_retries})...")
-            time.sleep(delay_seconds)
-            continue
-
-        print(f"Error: {response.status_code} - {response.text}")
-        return None
-
-    print("Max retries exceeded.")
+def post_with_retry(model, prompt, images=None, max_retries=5, delay_seconds=2):
+    for _ in range(max_retries):
+        answer = model.generate(prompt=prompt, images=images)
+        
+        if answer is not None:
+            return answer
+        
+        time.sleep(delay_seconds)
+        
+    logger.error(f"Content generation error: maximum retries {max_retries} reached for post_with_retry")
+        
     return None
 
 

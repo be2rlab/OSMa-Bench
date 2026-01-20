@@ -1,10 +1,10 @@
-data_dir: "./data/replica_cad"
-output_dir: "./output/replica_cad"
+data_dir: "./data"
+output_dir: "./output"
 
 foundation_model:
-    api_name: "gemini"
-    model: "gemini-2.0-flash"
-    api_key: ""
+    api_name: "ollama"
+    llm: "llama3.1:8b"
+    lvlm: "llava:7b"
 
 description_generation:
     prompt: >

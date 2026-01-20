@@ -1,98 +1,178 @@
 import argparse
-import json
 import logging
+import os
+from copy import deepcopy
+from tqdm import trange
 
-from src.config import Configuration
+from src.models import create_foundation_model
+from src.utils.config_loader import load_configuration
 from src.utils.api import post_with_retry
-from src.utils.json_utils import load_json, save_json, clean_json_response, extract_questions
+from src.utils.json_utils import load_json, save_json, to_json_string, parse_json
 
-logging.basicConfig(
-        level=logging.INFO,
-        format="%(levelname)s: %(message)s"
-    )
+
 logger = logging.getLogger(__name__)
 
-def batch_scene_graph_answering(config, questions, scene_graph, batch_size=10):
+
+def get_parser_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("config_path", help="Path to the YAML config.")
+    parser.add_argument("--scene", required=True, help="Name of the scene folder.")
+    parser.add_argument("--graph", required=True, help="Scene graph JSON")
+    
+    args = parser.parse_args()
+    
+    return args
+
+
+def get_pathes(base_dir, scene_name):
+    vqa_dir             = os.path.join(base_dir, scene_name, "vqa")
+    val_qa_file_path    = os.path.join(vqa_dir, f"{scene_name}_validated_questions.json")
+    answered_file_path  = os.path.join(vqa_dir, f"{scene_name}_answered.json")
+    
+    return val_qa_file_path, answered_file_path
+
+
+def extract_questions(qa_json):
     """
-    Answer questions about the scene graph in batches via Gemini API.
+    Flatten the nested QA structure under {"parameters": [{"frame":..., "qa":[...]}, ...]}
+    into a list of {'question':..., 'answer':..., ...}.
     """
+    if not isinstance(qa_json, dict) or "parameters" not in qa_json:
+        raise ValueError("Invalid QA JSON format: missing 'parameters' key.")
+    
+    questions = []
+    for frame_block in qa_json["parameters"]:
+        for item in frame_block.get("qa", []):
+            questions.append(item)
+
+    questions = [dict(qa, **{'id': i}) for i, qa in enumerate(questions)]
+    
+    return questions
+
+
+def load_questions(val_qa_file_path):
+    logger.info("Loading questions from %s", val_qa_file_path)
+    qa_json = load_json(val_qa_file_path)
+    questions = extract_questions(qa_json)
+    
+    if not questions:
+        logger.error("No questions found in %s", val_qa_file_path)
+        raise ValueError(f"No questions in {val_qa_file_path}")
+    
+    logger.info("Loaded %d questions", len(questions))
+
+    return questions
+
+
+def remove_broken_answers(q_batch, ans_q_batch):
+    filtered = []
+    
+    for answered in ans_q_batch:
+        if not all(key in answered for key in ['id', 'question', 'answer']):
+            logger.error(f"Parsed JSON miss key for question: {answered}")
+            continue
+        
+        ident = answered.get('id', None)
+        question = answered.get('question', None)
+        
+        q_with_id = {'id': ident, 'question': question}
+        
+        if q_with_id in q_batch:
+            q_with_id['answer'] = answered.get('answer', None)
+            
+            filtered.append(q_with_id)
+    
+    return filtered
+
+
+def batch_scene_graph_answering(foundation_model, prompt, questions, scene_graph, batch_size=10):
+    """
+    Answer questions about the scene graph in batches.
+    """
+    logger.info("Answering questions using foundation model")
+
+    prompt = prompt.replace('{scene_graph}', to_json_string(scene_graph))
+
     answered = []
-    api_url = f"{config.url}/{config.vlm}:generateContent?key={config.gemini_api_key}"
+    
+    for i in trange(0, len(questions), batch_size):
+        batch = questions[i : i + batch_size]
+        batch_prompt = prompt.replace('{questions}', to_json_string(batch)) 
 
-    for i in range(0, len(questions), batch_size):
-        batch = questions[i:i+batch_size]
-        prompt = (
-            "Answer the following questions based ONLY on the provided scene graph.\n"
-            "Add an 'answer' field for each question with your response.\n"
-            "If Yes/No expected, answer strictly 'Yes' or 'No'.\n"
-            "If counting, answer strictly as a number.\n\n"
-            f"Scene graph: ```json\n{json.dumps(scene_graph)}\n```\n\n"
-            f"Questions: ```json\n{json.dumps(batch)}\n```"
-        )
-        payload = {"contents":[{"parts":[{"text": prompt}]}]}
-
-        resp = post_with_retry(api_url, payload)
+        resp = post_with_retry(foundation_model, batch_prompt)
+        
         if not resp:
             logger.error("No response for batch %d/%d", i, len(questions))
-            raise RuntimeError("Model did not return a response.")
+            continue
 
-        raw = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
-        cleaned = clean_json_response(raw)
+        parsed = parse_json(resp)
 
-        try:
-            parsed = json.loads(cleaned)
-            if not isinstance(parsed, list):
-                raise ValueError("Parsed response is not a list")
-            answered.extend(parsed)
-            logger.debug("Batch %d parsed successfully: %d items", i, len(parsed))
-        except Exception as e:
-            logger.exception("Failed to parse JSON in batch %d: %s", i, e)
-            raise
+        if parsed is None:
+            logger.error("Failed to parse JSON in batch %d", i)
+            continue
+
+        if isinstance(parsed, dict):
+            parsed = [parsed]
+            
+        filtered = remove_broken_answers(batch, parsed)
+
+        answered.extend(filtered)
 
     return answered
 
-def merge_answers(original_questions, answered_questions):
+
+def merge_answers(gt_questions, answered_questions):
     """
     Merge model's answers back into the original question dicts.
     """
-    merged = []
-    for orig, ans in zip(original_questions, answered_questions):
-        entry = orig.copy()
-        entry["scene_graph_answer"] = ans.get("answer", "No answer")
-        merged.append(entry)
+    merged = deepcopy(gt_questions)
+
+    ans_by_id = {entry['id']: entry['answer'] for entry in answered_questions}
+
+    for entry in merged:
+        entry["scene_graph_answer"] = ans_by_id.get(entry['id'], "**NO ANSWER**")
+        entry.pop('id')
+
     return merged
 
+
 def main():
-    parser = argparse.ArgumentParser("Answer VQA via scene graph")
-    parser.add_argument("-c","--config", dest="cfg", required=True, help="YAML config path")
-    parser.add_argument("--questions", required=True, help="Questions JSON")
-    parser.add_argument("--graph", required=True, help="Scene graph JSON")
-    parser.add_argument("--output", required=True, help="Output JSON path")
-    args = parser.parse_args()
+    args = get_parser_args()
 
-    config = Configuration(yaml_path=args.cfg)
-
-    logger.info("Loading questions from %s", args.questions)
-    qa_json = load_json(args.questions)
-    questions = extract_questions(qa_json)
-    if not questions:
-        logger.error("No questions found in %s", args.questions)
-        raise ValueError(f"No questions in {args.questions}")
-    logger.info("Loaded %d questions", len(questions))
+    config = load_configuration(yaml_path=args.config_path)
+    
+    val_qa_file_path, answered_file_path = get_pathes(
+        base_dir=config.data_dir, scene_name=args.scene
+    )
+    
+    questions = load_questions(val_qa_file_path)
 
     logger.info("Loading scene graph from %s", args.graph)
     scene_graph = load_json(args.graph)
 
-    logger.info("Answering questions via Gemini API")
+    model_conf = config.foundation_model
+    foundation_model = create_foundation_model(
+        api_name = model_conf.api_name,
+        api_key = model_conf.api_key,
+        model = model_conf.model,
+        llm = model_conf.llm,
+        lvlm = model_conf.lvlm,
+    )
+
+    answering_conf = config.cg_answering
     answered = batch_scene_graph_answering(
-        config=config,
-        questions=[{"question": q["question"]} for q in questions],
-        scene_graph=scene_graph
+        foundation_model = foundation_model,
+        prompt = answering_conf.prompt,
+        questions = [{key: q[key] for key in ['id', 'question']} for q in questions],
+        scene_graph = scene_graph,
+        batch_size = answering_conf.batch_size
     )
 
     result = merge_answers(questions, answered)
-    logger.info("Saving merged answers to %s", args.output)
-    save_json(result, args.output)
+    
+    logger.info("Saving merged answers to %s", answered_file_path)
+    save_json(result, answered_file_path)
+
 
 if __name__ == "__main__":
     main()
