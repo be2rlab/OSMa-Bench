@@ -1,0 +1,1332 @@
+[
+    {
+        "id": 0,
+        "bbox_extent": [
+            1.2,
+            0.7,
+            0.1
+        ],
+        "bbox_center": [
+            0.6,
+            0.8,
+            5.4
+        ],
+        "possible_tags": [
+            "kitchen",
+            "counter",
+            "table",
+            "roof"
+        ],
+        "object_tag": "kitchen counter",
+        "caption": "an empty kitchen counter"
+    },
+    {
+        "id": 3,
+        "bbox_extent": [
+            2.5,
+            1.4,
+            0.1
+        ],
+        "bbox_center": [
+            4.5,
+            1.3,
+            0.3
+        ],
+        "possible_tags": [
+            "garage door",
+            "door",
+            "doors",
+            "blinds"
+        ],
+        "object_tag": "garage door",
+        "caption": "a garage door with blinds"
+    },
+    {
+        "id": 5,
+        "bbox_extent": [
+            3.1,
+            2.5,
+            0.1
+        ],
+        "bbox_center": [
+            4.5,
+            1.4,
+            1.9
+        ],
+        "possible_tags": [
+            "table",
+            "blinds",
+            "window",
+            "wall",
+            "garage door"
+        ],
+        "object_tag": "blinds",
+        "caption": "a table and blinds covering a dark window, near a black wall with a garage door"
+    },
+    {
+        "id": 6,
+        "bbox_extent": [
+            3.6,
+            3.4,
+            0.4
+        ],
+        "bbox_center": [
+            2.0,
+            0.2,
+            1.8
+        ],
+        "possible_tags": [
+            "table",
+            "rug",
+            "folding table"
+        ],
+        "object_tag": "white table",
+        "caption": "a pale blue or white table and possibly a rug"
+    },
+    {
+        "id": 8,
+        "bbox_extent": [
+            1.2,
+            0.8,
+            0.0
+        ],
+        "bbox_center": [
+            0.6,
+            1.4,
+            4.8
+        ],
+        "possible_tags": [
+            "cabinet",
+            "kitchen",
+            "corner"
+        ],
+        "object_tag": "empty cabinet",
+        "caption": "an empty cabinet in a corner of the kitchen"
+    },
+    {
+        "id": 9,
+        "bbox_extent": [
+            4.4,
+            3.4,
+            1.3
+        ],
+        "bbox_center": [
+            1.2,
+            1.8,
+            -1.4
+        ],
+        "possible_tags": [
+            "staircase",
+            "shelf",
+            "shelves",
+            "bookshelf",
+            "barbell"
+        ],
+        "object_tag": "shelf",
+        "caption": "a staircase and a shelf, possibly with some other exercise equipment or books"
+    },
+    {
+        "id": 10,
+        "bbox_extent": [
+            13.0,
+            8.7,
+            0.1
+        ],
+        "bbox_center": [
+            1.4,
+            3.0,
+            2.0
+        ],
+        "possible_tags": [
+            "ceiling light",
+            "computer monitor",
+            "wall",
+            "carpet",
+            "room",
+            "doorway",
+            "corner"
+        ],
+        "object_tag": "ceiling light",
+        "caption": "a ceiling light in an empty room with a computer monitor on the wall or floor"
+    },
+    {
+        "id": 11,
+        "bbox_extent": [
+            6.3,
+            6.1,
+            0.1
+        ],
+        "bbox_center": [
+            2.4,
+            0.0,
+            5.2
+        ],
+        "possible_tags": [
+            "carpet",
+            "sofa",
+            "coffee table",
+            "table",
+            "bed",
+            "floor"
+        ],
+        "object_tag": "room",
+        "caption": "a room containing a carpet, a small sofa, and possibly a coffee table or table, with a bed in it"
+    },
+    {
+        "id": 13,
+        "bbox_extent": [
+            4.0,
+            2.6,
+            0.7
+        ],
+        "bbox_center": [
+            2.9,
+            0.8,
+            -2.6
+        ],
+        "possible_tags": [
+            "staircase",
+            "stairs"
+        ],
+        "object_tag": "brown staircase",
+        "caption": "a brown staircase"
+    },
+    {
+        "id": 14,
+        "bbox_extent": [
+            2.8,
+            1.9,
+            0.0
+        ],
+        "bbox_center": [
+            3.4,
+            0.0,
+            5.8
+        ],
+        "possible_tags": [
+            "bed",
+            "rug",
+            "white rug",
+            "couch",
+            "chair",
+            "bookcase",
+            "table"
+        ],
+        "object_tag": "room with furniture",
+        "caption": "a room containing a bed, a white rug, a couch, and possibly a few chairs"
+    },
+    {
+        "id": 16,
+        "bbox_extent": [
+            2.1,
+            1.1,
+            0.4
+        ],
+        "bbox_center": [
+            0.5,
+            1.0,
+            -0.5
+        ],
+        "possible_tags": [
+            "bookcase",
+            "bookshelf",
+            "table",
+            "shelf",
+            "closet"
+        ],
+        "object_tag": "tall bookcase",
+        "caption": "a tall, metal or wooden bookcase or bookshelf"
+    },
+    {
+        "id": 17,
+        "bbox_extent": [
+            1.2,
+            0.8,
+            0.2
+        ],
+        "bbox_center": [
+            2.0,
+            0.3,
+            2.4
+        ],
+        "possible_tags": [
+            "coffee table",
+            "table",
+            "bed",
+            "tile",
+            "piece of paper"
+        ],
+        "object_tag": "white bed",
+        "caption": "a white bed and a coffee or gray table"
+    },
+    {
+        "id": 18,
+        "bbox_extent": [
+            0.8,
+            0.5,
+            0.4
+        ],
+        "bbox_center": [
+            3.8,
+            0.4,
+            2.8
+        ],
+        "possible_tags": [
+            "speaker",
+            "suitcase",
+            "barrel",
+            "router",
+            "bottle",
+            "planter"
+        ],
+        "object_tag": "black suitcase",
+        "caption": "a black suitcase and a speaker"
+    },
+    {
+        "id": 19,
+        "bbox_extent": [
+            1.7,
+            0.7,
+            0.0
+        ],
+        "bbox_center": [
+            4.5,
+            1.7,
+            6.1
+        ],
+        "possible_tags": [
+            "door",
+            "doorway"
+        ],
+        "object_tag": "gray door",
+        "caption": "a gray door in a doorway or doorway area"
+    },
+    {
+        "id": 20,
+        "bbox_extent": [
+            1.1,
+            0.7,
+            0.6
+        ],
+        "bbox_center": [
+            3.9,
+            1.3,
+            2.8
+        ],
+        "possible_tags": [
+            "plant",
+            "tree",
+            "Christmas tree",
+            "potted plant"
+        ],
+        "object_tag": "potted plant",
+        "caption": "a potted plant"
+    },
+    {
+        "id": 21,
+        "bbox_extent": [
+            3.6,
+            2.8,
+            1.2
+        ],
+        "bbox_center": [
+            2.8,
+            1.8,
+            -4.4
+        ],
+        "possible_tags": [
+            "doorway",
+            "stairs",
+            "staircase",
+            "plant",
+            "potted plant"
+        ],
+        "object_tag": "staircase",
+        "caption": "a staircase with multiple plants or potted plants"
+    },
+    {
+        "id": 22,
+        "bbox_extent": [
+            4.0,
+            1.6,
+            0.4
+        ],
+        "bbox_center": [
+            3.8,
+            1.3,
+            -2.6
+        ],
+        "possible_tags": [
+            "stairs",
+            "railing",
+            "pole",
+            "furniture",
+            "wall"
+        ],
+        "object_tag": "staircase",
+        "caption": "a staircase with multiple railings and possibly a pole or furniture nearby"
+    },
+    {
+        "id": 23,
+        "bbox_extent": [
+            13.3,
+            8.3,
+            0.5
+        ],
+        "bbox_center": [
+            1.0,
+            0.2,
+            1.5
+        ],
+        "possible_tags": [
+            "table",
+            "shelves",
+            "sofa",
+            "stairs",
+            "staircase",
+            "bicycle"
+        ],
+        "object_tag": "white table",
+        "caption": "a white table and possibly other tables, a sofa, stairs or a staircase, a bicycle"
+    },
+    {
+        "id": 25,
+        "bbox_extent": [
+            0.8,
+            0.8,
+            0.6
+        ],
+        "bbox_center": [
+            3.4,
+            1.5,
+            -4.1
+        ],
+        "possible_tags": [
+            "box",
+            "table"
+        ],
+        "object_tag": "wooden table",
+        "caption": "a white wooden table or a simple, possibly empty, box"
+    },
+    {
+        "id": 26,
+        "bbox_extent": [
+            2.0,
+            1.0,
+            0.6
+        ],
+        "bbox_center": [
+            -2.3,
+            0.5,
+            -2.0
+        ],
+        "possible_tags": [
+            "bicycle",
+            "bike"
+        ],
+        "object_tag": "red bicycle",
+        "caption": "a red bicycle"
+    },
+    {
+        "id": 27,
+        "bbox_extent": [
+            3.3,
+            2.3,
+            1.1
+        ],
+        "bbox_center": [
+            -2.0,
+            1.6,
+            -3.5
+        ],
+        "possible_tags": [
+            "bicycle",
+            "doorway",
+            "corner of room",
+            "pillar",
+            "computer monitor"
+        ],
+        "object_tag": "corner of doorway",
+        "caption": "a doorway, possibly in the corner of a room, with some other objects nearby"
+    },
+    {
+        "id": 29,
+        "bbox_extent": [
+            1.4,
+            1.3,
+            0.5
+        ],
+        "bbox_center": [
+            -2.3,
+            0.7,
+            -0.6
+        ],
+        "possible_tags": [
+            "dresser",
+            "cabinet",
+            "closet",
+            "cupboard",
+            "storage unit"
+        ],
+        "object_tag": "cabinet",
+        "caption": "multiple cabinets or closets in the kitchen area"
+    },
+    {
+        "id": 30,
+        "bbox_extent": [
+            5.7,
+            3.1,
+            0.1
+        ],
+        "bbox_center": [
+            4.5,
+            1.7,
+            0.5
+        ],
+        "possible_tags": [
+            "beige wall",
+            "wall",
+            "shelf",
+            "bookshelf",
+            "computer monitor",
+            "computer screen"
+        ],
+        "object_tag": "shelves",
+        "caption": "a beige wall and a shelf containing a computer screen"
+    },
+    {
+        "id": 31,
+        "bbox_extent": [
+            1.4,
+            0.9,
+            0.9
+        ],
+        "bbox_center": [
+            -0.2,
+            0.4,
+            1.8
+        ],
+        "possible_tags": [
+            "table",
+            "coffee table",
+            "wooden table",
+            "wood table",
+            "brown table"
+        ],
+        "object_tag": "coffee table",
+        "caption": "a brown coffee table"
+    },
+    {
+        "id": 33,
+        "bbox_extent": [
+            1.1,
+            0.9,
+            0.8
+        ],
+        "bbox_center": [
+            -1.1,
+            0.4,
+            3.5
+        ],
+        "possible_tags": [
+            "couch",
+            "armchair",
+            "chair"
+        ],
+        "object_tag": "couch",
+        "caption": "a couch and an armchair"
+    },
+    {
+        "id": 35,
+        "bbox_extent": [
+            2.2,
+            1.2,
+            1.0
+        ],
+        "bbox_center": [
+            -2.1,
+            0.4,
+            1.2
+        ],
+        "possible_tags": [
+            "couch",
+            "sofa"
+        ],
+        "object_tag": "white couch",
+        "caption": "a white couch"
+    },
+    {
+        "id": 36,
+        "bbox_extent": [
+            1.1,
+            1.1,
+            0.6
+        ],
+        "bbox_center": [
+            -1.8,
+            0.4,
+            2.8
+        ],
+        "possible_tags": [
+            "sofa",
+            "couch",
+            "armchair",
+            "chair"
+        ],
+        "object_tag": "sofa",
+        "caption": "a gray sofa or possibly a couch in the living room with an armchair"
+    },
+    {
+        "id": 38,
+        "bbox_extent": [
+            2.9,
+            0.1,
+            0.1
+        ],
+        "bbox_center": [
+            -1.9,
+            1.5,
+            3.7
+        ],
+        "possible_tags": [
+            "wall",
+            "door",
+            "divider",
+            "pole"
+        ],
+        "object_tag": "gray and white doors",
+        "caption": "a gray and a white door, possibly on a wall"
+    },
+    {
+        "id": 41,
+        "bbox_extent": [
+            1.4,
+            0.6,
+            0.4
+        ],
+        "bbox_center": [
+            -2.4,
+            1.6,
+            3.0
+        ],
+        "possible_tags": [
+            "cabinet",
+            "shelf",
+            "door",
+            "vent"
+        ],
+        "object_tag": "white cabinet",
+        "caption": "a white cabinet with a door handle and possibly a vent"
+    },
+    {
+        "id": 42,
+        "bbox_extent": [
+            2.2,
+            1.3,
+            0.1
+        ],
+        "bbox_center": [
+            -2.0,
+            1.1,
+            -3.9
+        ],
+        "possible_tags": [
+            "door",
+            "hallway",
+            "wall",
+            "kennel"
+        ],
+        "object_tag": "door",
+        "caption": "a door in a hallway"
+    },
+    {
+        "id": 43,
+        "bbox_extent": [
+            1.5,
+            0.1,
+            0.0
+        ],
+        "bbox_center": [
+            -1.6,
+            0.3,
+            0.9
+        ],
+        "possible_tags": [
+            "couch",
+            "sofa"
+        ],
+        "object_tag": "couch",
+        "caption": "a couch"
+    },
+    {
+        "id": 44,
+        "bbox_extent": [
+            1.0,
+            0.5,
+            0.4
+        ],
+        "bbox_center": [
+            3.4,
+            2.2,
+            -4.1
+        ],
+        "possible_tags": [
+            "plant",
+            "potted plant",
+            "artificial tree",
+            "bamboo"
+        ],
+        "object_tag": "potted plant",
+        "caption": "a potted plant"
+    },
+    {
+        "id": 45,
+        "bbox_extent": [
+            1.8,
+            1.2,
+            0.1
+        ],
+        "bbox_center": [
+            4.5,
+            2.1,
+            -2.6
+        ],
+        "possible_tags": [
+            "door",
+            "garage door",
+            "glass door"
+        ],
+        "object_tag": "brown door",
+        "caption": "brown door, possibly with glass paneling"
+    },
+    {
+        "id": 46,
+        "bbox_extent": [
+            1.8,
+            1.3,
+            0.0
+        ],
+        "bbox_center": [
+            4.5,
+            0.7,
+            -2.9
+        ],
+        "possible_tags": [
+            "staircase",
+            "stairs",
+            "railing",
+            "door",
+            "wall"
+        ],
+        "object_tag": "staircase",
+        "caption": "a staircase with a railing and possibly stairs, door, and walls"
+    },
+    {
+        "id": 48,
+        "bbox_extent": [
+            2.0,
+            0.6,
+            0.4
+        ],
+        "bbox_center": [
+            4.0,
+            1.0,
+            -0.8
+        ],
+        "possible_tags": [
+            "bookcase",
+            "shelves",
+            "shelf",
+            "bookshelf"
+        ],
+        "object_tag": "black bookcase",
+        "caption": "a black bookcase or bookshelf with shelves"
+    },
+    {
+        "id": 49,
+        "bbox_extent": [
+            2.6,
+            0.5,
+            0.1
+        ],
+        "bbox_center": [
+            4.5,
+            1.3,
+            0.8
+        ],
+        "possible_tags": [
+            "blinds",
+            "window",
+            "curtain"
+        ],
+        "object_tag": "blinds",
+        "caption": "window blinds"
+    },
+    {
+        "id": 50,
+        "bbox_extent": [
+            1.1,
+            0.2,
+            0.2
+        ],
+        "bbox_center": [
+            3.9,
+            0.7,
+            -1.9
+        ],
+        "possible_tags": [
+            "book",
+            "desk",
+            "computer monitor",
+            "house"
+        ],
+        "object_tag": "desk",
+        "caption": "a desk containing a computer monitor and possibly with a book nearby"
+    },
+    {
+        "id": 52,
+        "bbox_extent": [
+            1.7,
+            0.3,
+            0.0
+        ],
+        "bbox_center": [
+            4.5,
+            1.4,
+            -2.7
+        ],
+        "possible_tags": [
+            "railing",
+            "stairs"
+        ],
+        "object_tag": "railing",
+        "caption": "a railing on stairs"
+    },
+    {
+        "id": 53,
+        "bbox_extent": [
+            1.2,
+            0.5,
+            0.2
+        ],
+        "bbox_center": [
+            1.9,
+            1.3,
+            -4.0
+        ],
+        "possible_tags": [
+            "staircase",
+            "stairs"
+        ],
+        "object_tag": "staircase",
+        "caption": "a staircase"
+    },
+    {
+        "id": 54,
+        "bbox_extent": [
+            0.9,
+            0.4,
+            0.2
+        ],
+        "bbox_center": [
+            1.7,
+            1.5,
+            -4.2
+        ],
+        "possible_tags": [
+            "staircase",
+            "stairs"
+        ],
+        "object_tag": "staircase",
+        "caption": "a staircase or stairs"
+    },
+    {
+        "id": 55,
+        "bbox_extent": [
+            0.6,
+            0.5,
+            0.2
+        ],
+        "bbox_center": [
+            1.5,
+            1.6,
+            -4.4
+        ],
+        "possible_tags": [
+            "staircase",
+            "stairs"
+        ],
+        "object_tag": "staircase",
+        "caption": "a staircase or stairs"
+    },
+    {
+        "id": 56,
+        "bbox_extent": [
+            2.1,
+            1.0,
+            0.1
+        ],
+        "bbox_center": [
+            -0.4,
+            1.1,
+            4.3
+        ],
+        "possible_tags": [
+            "door",
+            "wall",
+            "cabinet"
+        ],
+        "object_tag": "door",
+        "caption": "a gray, glass or possibly wooden door"
+    },
+    {
+        "id": 57,
+        "bbox_extent": [
+            2.0,
+            1.1,
+            0.7
+        ],
+        "bbox_center": [
+            0.7,
+            1.0,
+            4.3
+        ],
+        "possible_tags": [
+            "refrigerator",
+            "fridge"
+        ],
+        "object_tag": "large white refrigerator",
+        "caption": "a large white refrigerator"
+    },
+    {
+        "id": 58,
+        "bbox_extent": [
+            2.9,
+            0.6,
+            0.2
+        ],
+        "bbox_center": [
+            0.6,
+            0.9,
+            6.5
+        ],
+        "possible_tags": [
+            "countertop",
+            "counter",
+            "kitchen"
+        ],
+        "object_tag": "black kitchen counter",
+        "caption": "a black kitchen counter"
+    },
+    {
+        "id": 59,
+        "bbox_extent": [
+            1.5,
+            0.6,
+            0.5
+        ],
+        "bbox_center": [
+            0.5,
+            2.2,
+            5.4
+        ],
+        "possible_tags": [
+            "wall",
+            "staircase",
+            "corner",
+            "cardboard box",
+            "book",
+            "computer monitor"
+        ],
+        "object_tag": "wall",
+        "caption": "a wall with a staircase and a corner, possibly containing cardboard boxes, books, and a computer monitor"
+    },
+    {
+        "id": 60,
+        "bbox_extent": [
+            1.6,
+            1.0,
+            0.1
+        ],
+        "bbox_center": [
+            0.9,
+            0.4,
+            5.8
+        ],
+        "possible_tags": [
+            "dresser",
+            "bed frame",
+            "bed",
+            "furniture"
+        ],
+        "object_tag": "brown dresser",
+        "caption": "a brown dresser and a wooden bed frame in a bedroom"
+    },
+    {
+        "id": 61,
+        "bbox_extent": [
+            2.4,
+            1.0,
+            0.2
+        ],
+        "bbox_center": [
+            0.6,
+            2.0,
+            6.6
+        ],
+        "possible_tags": [
+            "cabinet",
+            "wall cabinet",
+            "storage cabinet",
+            "door",
+            "window"
+        ],
+        "object_tag": "storage cabinet",
+        "caption": "a white door and a storage cabinet"
+    },
+    {
+        "id": 62,
+        "bbox_extent": [
+            1.0,
+            0.6,
+            0.0
+        ],
+        "bbox_center": [
+            1.4,
+            0.0,
+            6.7
+        ],
+        "possible_tags": [
+            "yoga mat",
+            "rug",
+            "mat",
+            "placemat"
+        ],
+        "object_tag": "blue square object",
+        "caption": "a blue square object, likely a yoga mat or rug"
+    },
+    {
+        "id": 63,
+        "bbox_extent": [
+            2.9,
+            1.3,
+            0.1
+        ],
+        "bbox_center": [
+            -1.4,
+            1.5,
+            -4.6
+        ],
+        "possible_tags": [
+            "door",
+            "elevator",
+            "doorway"
+        ],
+        "object_tag": "elevator",
+        "caption": "a doorway or an elevator"
+    },
+    {
+        "id": 65,
+        "bbox_extent": [
+            1.1,
+            0.4,
+            0.1
+        ],
+        "bbox_center": [
+            -1.4,
+            2.8,
+            -4.6
+        ],
+        "possible_tags": [
+            "wall"
+        ],
+        "object_tag": "white wall",
+        "caption": "a white wall"
+    },
+    {
+        "id": 67,
+        "bbox_extent": [
+            1.7,
+            0.5,
+            0.4
+        ],
+        "bbox_center": [
+            -0.6,
+            2.8,
+            -3.8
+        ],
+        "possible_tags": [
+            "bed",
+            "wooden panel",
+            "shelf",
+            "wall",
+            "plank",
+            "beam"
+        ],
+        "object_tag": "bed",
+        "caption": "a bed in a corner of the room with nearby wooden beams and shelves"
+    },
+    {
+        "id": 68,
+        "bbox_extent": [
+            3.5,
+            2.8,
+            0.2
+        ],
+        "bbox_center": [
+            -0.4,
+            1.5,
+            -3.6
+        ],
+        "possible_tags": [
+            "wall",
+            "door",
+            "frame",
+            "closet door",
+            "pole"
+        ],
+        "object_tag": "wall",
+        "caption": "a wall, possibly with a brown door or frame of a picture"
+    },
+    {
+        "id": 69,
+        "bbox_extent": [
+            2.6,
+            2.0,
+            0.6
+        ],
+        "bbox_center": [
+            0.8,
+            1.0,
+            -4.4
+        ],
+        "possible_tags": [
+            "wall",
+            "doorway",
+            "closet",
+            "room",
+            "hallway"
+        ],
+        "object_tag": "dark room",
+        "caption": "a dark room with a door and possibly a hallway"
+    },
+    {
+        "id": 71,
+        "bbox_extent": [
+            1.8,
+            0.8,
+            0.2
+        ],
+        "bbox_center": [
+            1.0,
+            1.9,
+            -4.4
+        ],
+        "possible_tags": [
+            "staircase",
+            "stairs",
+            "door"
+        ],
+        "object_tag": "staircase",
+        "caption": "a staircase and an open door"
+    },
+    {
+        "id": 72,
+        "bbox_extent": [
+            1.8,
+            0.9,
+            0.1
+        ],
+        "bbox_center": [
+            -0.4,
+            1.4,
+            -2.2
+        ],
+        "possible_tags": [
+            "door",
+            "closet door"
+        ],
+        "object_tag": "wooden door",
+        "caption": "a wooden door"
+    },
+    {
+        "id": 73,
+        "bbox_extent": [
+            1.8,
+            0.9,
+            0.4
+        ],
+        "bbox_center": [
+            2.6,
+            1.4,
+            7.8
+        ],
+        "possible_tags": [
+            "television set",
+            "TV",
+            "screen"
+        ],
+        "object_tag": "television",
+        "caption": "a television"
+    },
+    {
+        "id": 74,
+        "bbox_extent": [
+            4.4,
+            3.3,
+            0.2
+        ],
+        "bbox_center": [
+            2.4,
+            1.6,
+            8.0
+        ],
+        "possible_tags": [
+            "fridge",
+            "refrigerator",
+            "television",
+            "tv",
+            "flat screen tv"
+        ],
+        "object_tag": "cupboard",
+        "caption": "a flat screen TV and a cupboard"
+    },
+    {
+        "id": 75,
+        "bbox_extent": [
+            3.9,
+            2.9,
+            1.1
+        ],
+        "bbox_center": [
+            3.2,
+            2.0,
+            7.6
+        ],
+        "possible_tags": [
+            "television",
+            "tv"
+        ],
+        "object_tag": "television",
+        "caption": "a television"
+    },
+    {
+        "id": 76,
+        "bbox_extent": [
+            1.7,
+            1.0,
+            0.8
+        ],
+        "bbox_center": [
+            2.8,
+            0.6,
+            7.6
+        ],
+        "possible_tags": [
+            "television",
+            "tv",
+            "wooden cabinet",
+            "cabinet"
+        ],
+        "object_tag": "television",
+        "caption": "a television on a wooden cabinet"
+    },
+    {
+        "id": 77,
+        "bbox_extent": [
+            3.0,
+            1.6,
+            0.1
+        ],
+        "bbox_center": [
+            -0.4,
+            1.5,
+            -1.4
+        ],
+        "possible_tags": [
+            "wall",
+            "refrigerator",
+            "door"
+        ],
+        "object_tag": "refrigerator",
+        "caption": "features of the room, including a refrigerator and various types of walls"
+    },
+    {
+        "id": 78,
+        "bbox_extent": [
+            1.7,
+            1.5,
+            0.1
+        ],
+        "bbox_center": [
+            4.5,
+            1.7,
+            6.6
+        ],
+        "possible_tags": [
+            "window",
+            "blinds",
+            "wall"
+        ],
+        "object_tag": "window",
+        "caption": "a window with blinds, and possibly a gray wall"
+    },
+    {
+        "id": 79,
+        "bbox_extent": [
+            0.4,
+            0.3,
+            0.0
+        ],
+        "bbox_center": [
+            4.5,
+            0.2,
+            6.2
+        ],
+        "possible_tags": [
+            "window",
+            "wall"
+        ],
+        "object_tag": "small window",
+        "caption": "a small window"
+    },
+    {
+        "id": 80,
+        "bbox_extent": [
+            1.4,
+            1.3,
+            1.1
+        ],
+        "bbox_center": [
+            3.8,
+            0.5,
+            6.1
+        ],
+        "possible_tags": [
+            "desk",
+            "table",
+            "wall"
+        ],
+        "object_tag": "brown wooden desk",
+        "caption": "a brown wooden desk"
+    },
+    {
+        "id": 81,
+        "bbox_extent": [
+            0.3,
+            0.2,
+            0.0
+        ],
+        "bbox_center": [
+            4.5,
+            0.5,
+            6.0
+        ],
+        "possible_tags": [
+            "table",
+            "window"
+        ],
+        "object_tag": "table",
+        "caption": "a table"
+    }
+]

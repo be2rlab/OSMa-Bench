@@ -1,0 +1,275 @@
+[
+    {
+        "question": "Is the kitchen island a specific color?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a chandelier in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Does the couch have a particular texture?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a door AND a window?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a couch OR an armchair?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many framed pictures are on the wall?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "4",
+        "similar": "No"
+    },
+    {
+        "question": "Is the front door brown?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the sofa yellow?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the armchair white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a rug in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a television on the cabinet?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many doors are present?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "1",
+        "similar": "No"
+    },
+    {
+        "question": "How many wall-mounted decors are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "11",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a black framed picture in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the wall blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Does the armchair have a rough texture?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug on the floor?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a television on the floor?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a white window AND a gray painting?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a white lamp and an orange wall?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many paintings are present?",
+        "answer": "3",
+        "category": "Measurement",
+        "scene_graph_answer": "4",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a brick wall in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a vase in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a brick wall AND a window?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many windows are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "3",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the couch that is next to the column?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What object serves as support for the bowl?",
+        "answer": "Table",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the sofa?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "green",
+        "similar": "No"
+    },
+    {
+        "question": "What material is the ceiling made of?",
+        "answer": "Wood",
+        "category": "Object Attributes",
+        "scene_graph_answer": "wooden",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is on top of the cabinet?",
+        "answer": "Table lamp",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "pile of books",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the cabinet?",
+        "answer": "White framed window",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "windows",
+        "similar": "No"
+    },
+    {
+        "question": "Which object serves as support for the table lamp?",
+        "answer": "Cabinet",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "None",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the wall-mounted decor?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "gray",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the floral picture?",
+        "answer": "Orange and blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the armchair?",
+        "answer": "Creamy white",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is adjacent to the floral picture?",
+        "answer": "Rectangular black framed picture and Gray painting",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "There is no floral picture in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is adjacent to the bright white window?",
+        "answer": "Abstract black and white painting and Large dark gray cabinet",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "There is no bright white window in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the books?",
+        "answer": "Framed picture",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "There are no books specifically mentioned as being present in the scene.",
+        "similar": "No"
+    },
+    {
+        "question": "Which object holds the books?",
+        "answer": "Large dark gray cabinet",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "There are no books specifically mentioned as being present in the scene.",
+        "similar": "No"
+    }
+]

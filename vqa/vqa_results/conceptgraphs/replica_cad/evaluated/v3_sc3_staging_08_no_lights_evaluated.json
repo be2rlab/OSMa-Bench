@@ -1,0 +1,1178 @@
+[
+    {
+        "question": "Is the staircase light brown?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the handrail made of metal?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the potted plant red?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a carpet on the staircase?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a painting above the desk?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the desk made of metal?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a staircase AND a desk?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a potted plant OR a handrail?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a green plant AND a grey desk?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many potted plants are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the wooden table brown?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the television blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a refrigerator in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a plant in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a book on the table?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp near the sofa?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug AND a sofa?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a television OR a refrigerator?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a door AND a window?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "How many sofas are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the armchair gray?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the door blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a rug under the armchair?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there an armchair AND a door?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many rectangular tables are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "7",
+        "similar": "No"
+    },
+    {
+        "question": "Is the television rectangular?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the chair blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp on the desk?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a computer on the desk?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the chair next to the television?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a television AND a desk?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a chair OR a television?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many televisions are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the cabinet glass-doored?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the refrigerator blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the shelf wooden?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a plant on the shelf?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a metal shelf OR a wooden floor?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a black light AND a glass-doored cabinet?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many colors are mentioned?",
+        "answer": "4",
+        "category": "Measurement",
+        "scene_graph_answer": "7",
+        "similar": "No"
+    },
+    {
+        "question": "Is the countertop blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the sink circular?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a framed glass door?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Does the faucet have a specific texture?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a dishwasher in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a plate on the countertop?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a light above the sink?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug under the sink?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a faucet AND a sink in the scene?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a cabinet OR a countertop present?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a cabinet with a door OR a drawer?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the door rectangular?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the sofa blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the rug textured?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp on the media console?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the sofa placed on the rug?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a sofa AND a chair?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug OR a media console?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a door AND a sofa?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many doors are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "4",
+        "similar": "No"
+    },
+    {
+        "question": "Is the sofa light grey?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Does the bookcase have a rough texture?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a coffee table on the rug?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp on the bookcase?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a vase on the media console?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a sofa AND a bookcase in the scene?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there an armchair OR a media console in the scene?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a blue media console AND a green rug?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the table made of wood?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the chair cushioned?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a plant on the table?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a remote on the chair?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a chair AND a table?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a black television AND a white rug?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many shelves are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the rug white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Does the counter have a specific texture?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a mat in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the floor a specific color?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a pole in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the gray counter placed on the blue mat?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a plant on the counter?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a spoon on the mat?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a bowl on the floor?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a wooden floor AND a gray counter?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a black pole OR a red cabinet?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many cabinets are present with color specified?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "1",
+        "similar": "No"
+    },
+    {
+        "question": "Is the door white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the rug round?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the bicycle blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the countertop wooden?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the door in the cabinet?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a plant on the countertop?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp near the bicycle?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a book on the countertop?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug AND a bicycle?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a countertop OR a door?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a black pole AND white drawers?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many bicycles are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "2",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the potted plant?",
+        "answer": "Green",
+        "category": "Object Attributes",
+        "scene_graph_answer": "plant",
+        "similar": "Yes"
+    },
+    {
+        "question": "What material is the staircase made of?",
+        "answer": "Wood",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the handrail?",
+        "answer": "Grey",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What is located at the top of the staircase?",
+        "answer": "Green potted plant",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What is alongside the staircase?",
+        "answer": "Grey handrail",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What is near the wall?",
+        "answer": "Light brown wooden desk",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "plant",
+        "similar": "No"
+    },
+    {
+        "question": "What color are the kitchen cabinets near the refrigerator?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "I cannot answer this question.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the sofa on the beige rug?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "I cannot answer this question.",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned near the brown wooden table?",
+        "answer": "Gray armchair",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "brown chair",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is the television on?",
+        "answer": "Red wall",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "I cannot answer this question.",
+        "similar": "No"
+    },
+    {
+        "question": "What is on the wooden floor?",
+        "answer": "Beige rug",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "I cannot answer this question.",
+        "similar": "No"
+    },
+    {
+        "question": "What shape is the gray armchair?",
+        "answer": "Semi-circular",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the rectangular door?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What is on the wall?",
+        "answer": "Television",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "plant",
+        "similar": "No"
+    },
+    {
+        "question": "What is in the scene beside the armchair?",
+        "answer": "Table",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "couch",
+        "similar": "No"
+    },
+    {
+        "question": "Which is darker: the table or the armchair?",
+        "answer": "Table",
+        "category": "Comparison",
+        "scene_graph_answer": "The armchair",
+        "similar": "No"
+    },
+    {
+        "question": "Which is rectangular: the table or the armchair?",
+        "answer": "Table",
+        "category": "Comparison",
+        "scene_graph_answer": "The table",
+        "similar": "Yes"
+    },
+    {
+        "question": "Which is lighter in color: the door or the armchair?",
+        "answer": "Door",
+        "category": "Comparison",
+        "scene_graph_answer": "The door",
+        "similar": "Yes"
+    },
+    {
+        "question": "Which is mentioned as near the armchair: the table or the door?",
+        "answer": "Table",
+        "category": "Comparison",
+        "scene_graph_answer": "The table",
+        "similar": "Yes"
+    },
+    {
+        "question": "What material is the rectangular desk made of?",
+        "answer": "Wooden",
+        "category": "Object Attributes",
+        "scene_graph_answer": "brown/wooden",
+        "similar": "Yes"
+    },
+    {
+        "question": "What shape is the beige chair described as?",
+        "answer": "Rounded",
+        "category": "Object Attributes",
+        "scene_graph_answer": "brown",
+        "similar": "No"
+    },
+    {
+        "question": "What is mounted on the wall?",
+        "answer": "Television",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "plant",
+        "similar": "No"
+    },
+    {
+        "question": "What is in front of the wall?",
+        "answer": "Desk",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "brown wall",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the desk?",
+        "answer": "Chair",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "desk",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the cabinet with glass doors?",
+        "answer": "Gray and white",
+        "category": "Object Attributes",
+        "scene_graph_answer": "What is adjacent to the gray and white glass-doored cabinet?",
+        "similar": "No"
+    },
+    {
+        "question": "What is adjacent to the gray and white glass-doored cabinet?",
+        "answer": "Gray refrigerator",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "What color is the cabinet with glass doors?",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the countertop?",
+        "answer": "Black",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What shape is the sink?",
+        "answer": "Square",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What color are the framed glass door kitchen cabinets?",
+        "answer": "White and gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is located above the countertop?",
+        "answer": "White and gray framed glass door kitchen cabinets",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is the sink positioned on?",
+        "answer": "Black countertop",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is the faucet positioned on?",
+        "answer": "Silver-colored metal sink",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "answer",
+        "similar": "No"
+    },
+    {
+        "question": "How many countertops are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "answer",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger: the countertop or the sink?",
+        "answer": "Countertop",
+        "category": "Comparison",
+        "scene_graph_answer": "answer",
+        "similar": "No"
+    },
+    {
+        "question": "Which is positioned higher: the cabinets or the sink?",
+        "answer": "Cabinets",
+        "category": "Comparison",
+        "scene_graph_answer": "answer",
+        "similar": "No"
+    },
+    {
+        "question": "Which is made of metal: the faucet or the countertop?",
+        "answer": "The faucet",
+        "category": "Comparison",
+        "scene_graph_answer": "answer",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the upholstered sofa?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the media console?",
+        "answer": "Blue and gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned in the foreground?",
+        "answer": "White, rectangular door",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What is in the left of the scene?",
+        "answer": "Gray upholstered sofa",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "bookshelf",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned in the background?",
+        "answer": "Blue and gray media console",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "room",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the sectional sofa?",
+        "answer": "Light grey",
+        "category": "Object Attributes",
+        "scene_graph_answer": "brown",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the media console?",
+        "answer": "Blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "wooden",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned behind the sofa?",
+        "answer": "Blue media console",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "staircase",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned in front of the bookcase?",
+        "answer": "Light grey sectional sofa",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "staircase",
+        "similar": "No"
+    },
+    {
+        "question": "How many armchairs are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "multiple",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the shelf that is wooden?",
+        "answer": "Blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "brown",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the chair that is cushioned?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "brown",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned under the television?",
+        "answer": "The table, shelf, chair and rug are all positioned under the television.",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "table",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is located on the floor?",
+        "answer": "The chair, table, shelf, and rug are located on the floor.",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "mat",
+        "similar": "Yes"
+    },
+    {
+        "question": "Which is larger: the television or the chair?",
+        "answer": "The television",
+        "category": "Comparison",
+        "scene_graph_answer": "television",
+        "similar": "Yes"
+    },
+    {
+        "question": "Which is positioned higher: the television or the table?",
+        "answer": "The television",
+        "category": "Comparison",
+        "scene_graph_answer": "television",
+        "similar": "Yes"
+    },
+    {
+        "question": "Which is longer: the table or the shelf?",
+        "answer": "Cannot be determined.",
+        "category": "Comparison",
+        "scene_graph_answer": "The table",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the cabinet that is above the counter?",
+        "answer": "White and brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the mat that is near the counter?",
+        "answer": "Blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the counter that is near the mat?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned above the gray counter?",
+        "answer": "White and brown cabinet",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What is near the blue mat?",
+        "answer": "Gray counter",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What is the blue mat on?",
+        "answer": "Wooden floor",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What is near the gray cabinet?",
+        "answer": "Green cabinet",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Unknown",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the storage cabinet above the countertop?",
+        "answer": "White and glass",
+        "category": "Object Attributes",
+        "scene_graph_answer": "white",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the rectangular rug?",
+        "answer": "Blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "brown",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the bicycle on the wooden floor?",
+        "answer": "Red",
+        "category": "Object Attributes",
+        "scene_graph_answer": "red",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is located above the white drawers?",
+        "answer": "Gray countertop",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "cabinets",
+        "similar": "No"
+    },
+    {
+        "question": "What is near the black pole?",
+        "answer": "Gray and white storage cabinet",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "bookshelf",
+        "similar": "No"
+    },
+    {
+        "question": "What is on the wooden floor?",
+        "answer": "Blue rectangular rug and red bicycle",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "red bicycle",
+        "similar": "Yes"
+    }
+]

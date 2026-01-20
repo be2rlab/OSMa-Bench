@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions</h1>
   <p align="center">
-    <a href="https://github.com/warmhammer/"><strong>Maxim Popov</strong></a>
+    <a href="https://warmhammer.github.io/"><strong>Maxim Popov</strong></a>
     ·
     <a href="https://github.com/lumalfo/"><strong>Regina Kurkova</strong></a>
     ·
@@ -29,27 +29,19 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#todo">TODO</a>
-    </li>
-    <li>
       <a href="#data-preparation">Data Preparation</a>
     </li>
     <li>
       <a href="#semantic-segmentation-evaluation">Semantic Segmentation Evaluation</a>
     </li>
     <li>
+      <a href="#visual-question-answering">Visual Question Answering</a>
+    </li>
+    <li>
       <a href="#citation">Citation</a>
     </li>
   </ol>
 </details>
-
-
-## TODO
-- [x] Release Habitat Data Generator
-- [x] Release semantic segmentation evaluation module
-- [ ] Release Visual Question Answering module
-- [x] Release Augmented ReplicaCAD dataset
-- [x] Release OSMa-Bench dataset
 
 ## Data Preparation
 
@@ -80,6 +72,14 @@ The `semseg/` directory contains the full evaluation pipeline, including scripts
 The directory also includes benchmarked methods' repositories, benchmarking results, and Docker setup files with running scripts.
 
 For detailed instructions on setup, execution, and workflow, please refer to the [README](semseg/README.md) inside the `semseg/` directory.
+
+## Visual Question Answering
+
+VQA module provides an automated end-to-end workflow for generating and evaluating question-answer pairs from 2D images. It integrates LVLM and LLM to extract frame-based scene descriptions, synthesize QA pairs, validate outputs, and assess accuracy through scene-graph reasoning. 
+
+The `vqa/` directory contains the full evaluation pipeline, including scripts, utilities, and configuration files.
+
+For detailed instructions on setup, execution, and workflow, please refer to the [README](vqa/README.md) inside the `vqa/` directory.
 
 ## Citation
 Using OSMa-Bench in your research? Please cite:

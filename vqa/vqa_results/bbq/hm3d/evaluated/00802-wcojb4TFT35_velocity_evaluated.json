@@ -1,0 +1,520 @@
+[
+    {
+        "question": "Is the fan yellow?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the wall brown?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the heater blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Does the door frame have a circular shape?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a tool on the table?",
+        "answer": "Yes",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a fan AND a heater?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a table OR a door frame?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a green object AND a wooden plank?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many fans are in the scene?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the toolbox blue?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a toolbox on the garage door?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a corded tool on the table?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a red table AND a blue toolbox?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many corded tools are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": 0,
+        "similar": "No"
+    },
+    {
+        "question": "Is the bucket blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the wired tool round?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lock on the door?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a door AND a bucket?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a wired tool OR a cabinet?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a black object AND a white object?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many shelves are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "1",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the shelf dark brown?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Does the bucket have a wooden texture?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a ladder in the scene?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a dark gray object in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the car green?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a toolbox on the shelf?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a picture on the garage door?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a black coiled charger on the shelf?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the jerrycan on the workbench?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a blue car AND a red jerrycan?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a gray bucket OR a yellow jerrycan?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a workbench AND a shelf?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a charger AND a car?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a blue plastic container AND a light blue and white container?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many jerrycans are present on the floor?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the car dark blue?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the garage door behind the car white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the bag red?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is a tool placed on the floor?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a table in the garage?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a car AND a garage door?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a bag OR a wall?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a car AND a brown table?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many cars are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": 0,
+        "similar": "No"
+    },
+    {
+        "question": "What color is the vintage fan?",
+        "answer": "Yellow",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the object that is green?",
+        "answer": "Green",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the heater with a rectangular shape?",
+        "answer": "White and black",
+        "category": "Object Attributes",
+        "scene_graph_answer": "answer",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is positioned on the white wall?",
+        "answer": "Yellow vintage fan, white and black heater, wooden plank, green object",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "answer",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is on the wood-grained large table?",
+        "answer": "Metallic small tool",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "answer",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the table?",
+        "answer": "Red",
+        "category": "Object Attributes",
+        "scene_graph_answer": "answer",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is in the background?",
+        "answer": "White garage door",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "answer",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is on top of the red table?",
+        "answer": "Blue plastic toolbox",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is hanging on the wall?",
+        "answer": "Black corded tool",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Which object serves as support for the blue toolbox?",
+        "answer": "Red table",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the shelf?",
+        "answer": "Brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "brown",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the bucket that is on the shelf?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "A blue plastic container.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the wired tool?",
+        "answer": "Black",
+        "category": "Object Attributes",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What is located on the shelf?",
+        "answer": "Gray bucket",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A brown wooden shelf.",
+        "similar": "No"
+    },
+    {
+        "question": "What is on the floor?",
+        "answer": "Assorted items",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A blue plastic container.",
+        "similar": "No"
+    },
+    {
+        "question": "What is on the wall?",
+        "answer": "Brown wooden shelf, black wired tool",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A wall on the side of a building, partially covered by a white curtain.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the jerrycan that is on the floor?",
+        "answer": "Red or Yellow",
+        "category": "Object Attributes",
+        "scene_graph_answer": "A jerrycan is not in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the container that is on the dark brown wooden shelf?",
+        "answer": "Light blue and white",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Blue",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the bucket on the shelf?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "A bucket is not in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is the color of the car on the right side of the garage?",
+        "answer": "Blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "There is no car described in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is located behind the gray workbench?",
+        "answer": "Red jerrycan, Yellow jerrycan, Blue plastic container",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "There is no gray workbench in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is hanging on the wall mounted equipment?",
+        "answer": "Black coiled charger, Dark gray object",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "There is no wall mounted equipment in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the bag?",
+        "answer": "Blue and white",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Blue",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the garage door?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned in front of the garage door?",
+        "answer": "The dark blue car",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is located on the brown floor?",
+        "answer": "Folded blue and white bag",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Blue and white bag on floor.",
+        "similar": "Yes"
+    },
+    {
+        "question": "Which is larger: the car or the bag?",
+        "answer": "The car",
+        "category": "Comparison",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger: the garage door or the bag?",
+        "answer": "The garage door",
+        "category": "Comparison",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    }
+]

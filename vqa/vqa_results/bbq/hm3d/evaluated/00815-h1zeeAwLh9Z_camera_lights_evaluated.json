@@ -1,0 +1,296 @@
+[
+    {
+        "question": "Is the wall painted gray?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there an electrical wall outlet in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the washing machine black?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is a plant on the vanity?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a cabinet above the vanity?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a washing machine AND a vanity?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there an outlet AND a painting?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many cabinets are present near the floor?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "6",
+        "similar": "No"
+    },
+    {
+        "question": "How many washing machines are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "How many lights are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the chimney stone textured?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the stove made of metal?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the carpet blue?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a door in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a curtain in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window AND a plant?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a carpet OR a rug?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many windows are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "2",
+        "similar": "No"
+    },
+    {
+        "question": "How many chairs are around the table?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the rug rectangular?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the microwave white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the countertop wooden?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a vase on the counter?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a sink on the island?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp AND a table?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a mixer AND an oven?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many lamps are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": 0,
+        "similar": "No"
+    },
+    {
+        "question": "How many ovens are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": 0,
+        "similar": "No"
+    },
+    {
+        "question": "What color is the wooden vanity?",
+        "answer": "Light brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Yellow",
+        "similar": "No"
+    },
+    {
+        "question": "What is the light mounted on?",
+        "answer": "Ceiling",
+        "category": "Object Attributes",
+        "scene_graph_answer": "A wall on the side of a building, partially covered by a wooden beam.",
+        "similar": "No"
+    },
+    {
+        "question": "What material is the floor made of?",
+        "answer": "Tile",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Tile",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is the position of the cabinet in relation to the washing machine?",
+        "answer": "Above",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Unanswerable",
+        "similar": "No"
+    },
+    {
+        "question": "What stores items in the scene?",
+        "answer": "Brown wooden cabinet, Light brown wooden vanity, White front-load washing machine",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "Unanswerable",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger: washing machine or outlet?",
+        "answer": "Washing machine",
+        "category": "Comparison",
+        "scene_graph_answer": "Unanswerable",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the stove?",
+        "answer": "Black",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the stove?",
+        "answer": "Pipe",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is below the stairs?",
+        "answer": "Floor",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the rectangular rug?",
+        "answer": "blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Blue",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the small lamp?",
+        "answer": "white",
+        "category": "Object Attributes",
+        "scene_graph_answer": "null",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned behind the table?",
+        "answer": "window",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A wall on the side of a building.",
+        "similar": "No"
+    },
+    {
+        "question": "What is located under the chair?",
+        "answer": "rug",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "null",
+        "similar": "No"
+    },
+    {
+        "question": "What do the wooden beams serve as?",
+        "answer": "support",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "Wooden beams",
+        "similar": "No"
+    }
+]

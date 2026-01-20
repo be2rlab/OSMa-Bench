@@ -1,0 +1,835 @@
+[
+    {
+        "question": "Is the curtain patterned?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the pillow soft?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the sofa grey?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the artwork above the sofa?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a rug under the sofa?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many pillows are present?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "6",
+        "similar": "No"
+    },
+    {
+        "question": "How many artworks are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "4",
+        "similar": "No"
+    },
+    {
+        "question": "Is the vase white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the mirror rectangular?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the dresser beige?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a sculpture in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the sculpture on the floor?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp on the dresser?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug in the doorway?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a vase and a mirror?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a painting or a door?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a vase AND sticks?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a banister present?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a white ceiling?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a black banister?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many banisters are visible?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the headboard white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a pillow on the chair?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a Spiderman poster OR an Iron Man poster on the wall?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many framed posters are on the wall?",
+        "answer": "3",
+        "category": "Measurement",
+        "scene_graph_answer": "2",
+        "similar": "No"
+    },
+    {
+        "question": "Is the wall white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the drawer made of wood?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the mirror vertical?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a rug under the drawer?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a blanket on the headboard?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a drawer AND a lamp?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a poster OR a mirror?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the wall a dark color?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a wall AND the wall painted blue?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the framed picture a specific color?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the railing made of metal?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Does the table have a particular texture?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the window closed?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug on the floor?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the door closed?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a picture AND a railing?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a curtain AND a lamp?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many framed pictures are present?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": 2,
+        "similar": "Yes"
+    },
+    {
+        "question": "How many windows are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": 10,
+        "similar": "No"
+    },
+    {
+        "question": "Is the door white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the wall beige?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the curtain red?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a vase near the window?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is the door open OR the armchair blue?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many door frames are mentioned?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "2",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the fireplace dark-colored?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the floor wooden?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a television in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a sofa near the fireplace?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a lamp on the kitchen counter?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window OR a chair?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a painting AND a sofa?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "How many walls are present?",
+        "answer": "3",
+        "category": "Measurement",
+        "scene_graph_answer": 83,
+        "similar": "No"
+    },
+    {
+        "question": "Is the ceiling painted white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a lamp in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the floor carpeted?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp OR a vase?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window AND a curtain?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a plate AND a chair?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many cabinets are present?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "4",
+        "similar": "No"
+    },
+    {
+        "question": "Is the television rectangular?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a painting in the scene?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "How many armchairs are present?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "How many blankets are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What shape is the framed artwork above the pillows?",
+        "answer": "Rectangular",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What color are the soft pillows?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the pillow?",
+        "answer": "Artwork",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Which is positioned higher: the mirror or the sculpture?",
+        "answer": "Mirror",
+        "category": "Comparison",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the pillow?",
+        "answer": "Pillow",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is beside the curtain?",
+        "answer": "Wall outlet",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A wall on the side of a building",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the framed painting?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Measurement",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the framed mirror?",
+        "answer": "Brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Measurement",
+        "similar": "No"
+    },
+    {
+        "question": "What color are the sticks in the vase?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Measurement",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the dresser?",
+        "answer": "Mirror",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Measurement",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the door?",
+        "answer": "Doorway",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Measurement",
+        "similar": "No"
+    },
+    {
+        "question": "What shape is the electrical switch?",
+        "answer": "Rectangular",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is located behind the banister?",
+        "answer": "White door",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the pillow?",
+        "answer": "Red, yellow, or blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is the color of the lamp?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the lampshade?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "White",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the headboard?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "Wooden",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the wall that is painted?",
+        "answer": "Light beige",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the wall?",
+        "answer": "Other door",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the rectangular picture with a white frame?",
+        "answer": "Decorative",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What material is the dark decorative railing made of?",
+        "answer": "Wooden",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the curtain?",
+        "answer": "Beige and white bedside table",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the other picture?",
+        "answer": "White framed rectangular decorative picture",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is in front of the picture?",
+        "answer": "Small table lamp",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is visible in the scene?",
+        "answer": "White paneled door",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the cushioned armchair?",
+        "answer": "Dark brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is behind the curtain?",
+        "answer": "Clear glass window",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is beside the window?",
+        "answer": "Large grey curtain",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Curtains",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is the plant placed on?",
+        "answer": "Table",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger: the door or the door frame?",
+        "answer": "Door",
+        "category": "Comparison",
+        "scene_graph_answer": "door",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the wall?",
+        "answer": "White, Light beige, dark",
+        "category": "Object Attributes",
+        "scene_graph_answer": "white",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the door?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "white",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is positioned beside the fireplace?",
+        "answer": "Painting, wall",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A wall on the side of a building.",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is in front of the window?",
+        "answer": "Curtain",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Curtain with stains.",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the armchair near the window?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "A wall on the side of a building, partially covered by a white curtain.",
+        "similar": "No"
+    },
+    {
+        "question": "What color are the curtains around the window?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "White",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is positioned on the counter?",
+        "answer": "Plant, jar",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the counter?",
+        "answer": "Cabinet",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is behind the counter?",
+        "answer": "Backsplash",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is located on the rug?",
+        "answer": "Coffee table",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the fireplace?",
+        "answer": "Painting",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the rectangular television?",
+        "answer": "Dark brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the decorative coral?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the sheer curtain?",
+        "answer": "Beige",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the knitted blanket?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned below the television?",
+        "answer": "White marble decorative fireplace",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is behind the curtain?",
+        "answer": "White framed window",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the armchair?",
+        "answer": "Clear glass side table",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    },
+    {
+        "question": "Which object supports the lamp?",
+        "answer": "Clear glass side table",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "No answer",
+        "similar": "No"
+    }
+]

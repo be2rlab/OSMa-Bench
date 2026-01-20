@@ -1,0 +1,25 @@
+File Name,Overall Accuracy,Accuracy (No Spatial),Binary Existence-Based,Binary General,Binary Logical,Comparison,Measurement,Object Attributes,Object Relations - Functional,Object Relations - Spatial
+00800-TEEsavR23oF_camera_lights_answered.json,41.98%,50.77%,77.78%,70.59%,63.64%,27.27%,33.33%,21.43%,0.00%,6.25%
+00800-TEEsavR23oF_no_lights_answered.json,53.09%,63.08%,100.00%,82.35%,72.73%,54.55%,33.33%,21.43%,0.00%,12.50%
+00800-TEEsavR23oF_velocity_answered.json,51.85%,61.54%,100.00%,70.59%,81.82%,54.55%,0.00%,28.57%,0.00%,12.50%
+00802-wcojb4TFT35_camera_lights_answered.json,36.49%,38.71%,90.91%,53.33%,26.67%,50.00%,20.00%,0.00%,0.00%,25.00%
+00802-wcojb4TFT35_no_lights_answered.json,36.49%,41.94%,90.91%,60.00%,26.67%,50.00%,20.00%,7.69%,0.00%,8.33%
+00802-wcojb4TFT35_velocity_answered.json,44.59%,46.77%,81.82%,60.00%,26.67%,50.00%,20.00%,38.46%,0.00%,33.33%
+00803-k1cupFYWXJ6_camera_lights_answered.json,42.11%,46.81%,100.00%,50.00%,55.56%,57.14%,0.00%,11.11%,0.00%,20.00%
+00803-k1cupFYWXJ6_no_lights_answered.json,47.37%,55.32%,100.00%,70.00%,77.78%,42.86%,25.00%,11.11%,0.00%,10.00%
+00803-k1cupFYWXJ6_velocity_answered.json,52.63%,59.57%,100.00%,60.00%,66.67%,100.00%,0.00%,22.22%,0.00%,20.00%
+00808-y9hTuugGdiq_camera_lights_answered.json,46.21%,50.44%,86.96%,56.52%,50.00%,35.29%,37.50%,21.05%,0.00%,21.05%
+00808-y9hTuugGdiq_no_lights_answered.json,53.03%,61.95%,78.26%,73.91%,68.18%,52.94%,50.00%,31.58%,100.00%,0.00%
+00808-y9hTuugGdiq_velocity_answered.json,49.24%,56.64%,78.26%,60.87%,68.18%,47.06%,50.00%,21.05%,100.00%,5.26%
+00810-CrMo8WxCyVb_camera_lights_answered.json,37.82%,43.75%,66.67%,51.72%,66.67%,50.00%,18.18%,18.18%,0.00%,13.04%
+00810-CrMo8WxCyVb_no_lights_answered.json,41.18%,48.96%,66.67%,58.62%,73.33%,100.00%,18.18%,22.73%,0.00%,8.70%
+00810-CrMo8WxCyVb_velocity_answered.json,40.34%,46.88%,80.00%,55.17%,73.33%,50.00%,9.09%,18.18%,0.00%,13.04%
+00813-svBbv1Pavdk_camera_lights_answered.json,34.31%,37.90%,86.36%,45.83%,43.48%,0.00%,31.82%,0.00%,0.00%,0.00%
+00813-svBbv1Pavdk_no_lights_answered.json,29.20%,31.45%,77.27%,41.67%,43.48%,0.00%,4.55%,4.76%,0.00%,7.69%
+00813-svBbv1Pavdk_velocity_answered.json,33.58%,37.10%,77.27%,45.83%,52.17%,0.00%,13.64%,14.29%,0.00%,0.00%
+00814-p53SfW6mjZe_camera_lights_answered.json,41.03%,44.12%,100.00%,40.00%,40.00%,0.00%,20.00%,16.67%,66.67%,20.00%
+00814-p53SfW6mjZe_no_lights_answered.json,30.77%,35.29%,100.00%,40.00%,20.00%,0.00%,0.00%,33.33%,0.00%,0.00%
+00814-p53SfW6mjZe_velocity_answered.json,43.59%,47.06%,80.00%,40.00%,60.00%,0.00%,40.00%,33.33%,33.33%,20.00%
+00815-h1zeeAwLh9Z_camera_lights_answered.json,30.95%,35.14%,83.33%,33.33%,50.00%,0.00%,0.00%,33.33%,0.00%,0.00%
+00815-h1zeeAwLh9Z_no_lights_answered.json,40.48%,45.95%,83.33%,66.67%,33.33%,100.00%,14.29%,33.33%,0.00%,0.00%
+00815-h1zeeAwLh9Z_velocity_answered.json,42.86%,43.24%,83.33%,44.44%,33.33%,0.00%,28.57%,50.00%,0.00%,40.00%

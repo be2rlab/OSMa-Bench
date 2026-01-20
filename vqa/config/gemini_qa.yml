@@ -1,0 +1,152 @@
+# Prompts for generation
+vlm_prompt: "Provide a series of statements formatted as \"{object description (color, material etc.)} {object} is {spatial relationship} {other object}\" based on the image. Respond solely with these sentences."
+llm_prompt: "Given a text describing a scene, generate 10 questions focusing on spatial relationships between objects, their presence, and other relevant details. Ensure that 5 of the questions can be answered with 1-2 words, and the remaining 5 are yes/no questions. Return JSON with 'question' and 'answer' fields."
+
+base_dir: "./data"  # Where to store data
+image_format: "jpg"
+
+# Instead of hardcoding a specific scene path, store only the base directory:
+base_scenes_dir: "./data"
+
+# VQA config (paths below are optional; adapt as needed)
+scene_graph_path: "/some/fallback/scene_graph.json"
+vqa_prompt: "You will be given a scene graph describing a 3D scene. ..."
+
+# Evaluation prompt
+eval_prompt: "..."
+
+# Gemini API settings
+gemini_api_key: "" #Add your key here
+vlm: "gemini-2.0-flash"
+llm: "gemini-2.0-flash"
+url: "https://generativelanguage.googleapis.com/v1/models"
+
+# Additional parameters
+frame_step: 200
+selection_threshold: 0.8
+rejection_keyword: "Scene not suitable"
+
+gemini_scene_prompt: >
+  Describe the given image and ALL the objects using structured statements.
+  For EVERY visible object, append affordance tags in square brackets. Use the verbs: open, pull, push, sit, place, grasp, store, lie.
+
+  If more than 50% of the scene is blocked by walls, return:
+  '{rejection_keyword}'.
+
+  Use only these two formats:
+  - {detailed object description} {object} is {spatial relationship} {other object}.
+  - {detailed object description} {object} [affordance tag] is present in the scene.
+
+  Do not describe objects using vague location references like "in the background", "in the foreground", "on the left", "on the right", or "at the center".  
+  Do not use standalone positional statements like "X is in the background". Instead, always use a relation to **another object** (e.g., "Window is behind the bed").
+
+  Additionally, add the following annotations:
+  - If the floor patch in front of an object is visibly clear, add line: {free-space in front of <object>: true}
+  - If there is at least one hand-width (≈ 10 cm) of empty space above an object, add line: {clearance-above <object>: true}
+
+  Ensure:
+  - All visible objects are described with attributes (color, material, size, shape, function).
+  - Spatial relationships are logically consistent and involve exactly two objects.
+  - Use broad and recognizable object names. Avoid ambiguous references.
+  - Return only the structured statements.
+
+qa_generation_prompt: >
+  {
+    "instructions": "Generate diverse questions based strictly on the given scene description. Do not infer or assume any properties beyond the provided information.",
+            "categories": [
+                {
+                    "name": "Existence-Positive",
+                    "count": "3-5",
+                    "examples": ["Is there X placed on Y?", "Is there an X in Y?"],
+                    "rules": "Questions about objects that DO exist in the scene. Answers must be 'Yes'."
+                },
+                {
+                    "name": "Existence-Negative",
+                    "count": "2-4",
+                    "examples": ["Is there X placed on Y?", "Is there an X in Y?"],
+                    "rules": "Ask about non-existent but plausible objects. Answers must be 'No'."
+                },
+                {
+                    "name": "Binary Logical",
+                    "count": "3-5",
+                    "examples": [
+                        "Is there an X AND a Y?",
+                        "Is there an X OR a Y?"
+                    ],
+                    "rules": "Must include 'AND' or 'OR'. Answers must be 'Yes' or 'No'."
+                },
+                {
+                    "name": "Object Attributes",
+                    "count": "3-5",
+                    "examples": [
+                        "What color is X with a specific shape?",
+                        "What material is X made of?"
+                    ],
+                    "rules": "Ensure clarity by specifying distinguishing properties."
+                },
+                {
+                    "name": "Object Relations - Spatial",
+                    "count": "3-5",
+                    "examples": [
+                        "What is positioned in front of X?",
+                        "What is located under X?"
+                    ],
+                    "rules": "These questions must describe interactions (e.g., 'holds', 'supports'). Each question must reference exactly two specific objects (e.g. \"What is above the *red sofa*?\"). Do NOT ask about walls / floor / ceiling. Phrase it so that **only one object in the image** satisfies the relation."
+                },
+                {
+                    "name": "Object Relations - Functional",
+                    "count": "1-3",
+                    "examples": [
+                        "What does X interact with Y?",
+                        "Which object serves as support for X?",
+                        "Which object holds or contains X?"
+                    ],
+                    "rules": "These questions must describe interactions (e.g., 'holds', 'supports'). Each question must reference exactly two specific objects (e.g. \"What is above the *red sofa*?\"). Do NOT ask about walls / floor / ceiling. Phrase it so that **only one object in the image** satisfies the relation."
+                },
+                {
+                    "name": "Measurement",
+                    "count": "1-3",
+                    "examples": ["How many X are present?", "How many X are grouped together?"],
+                    "rules": "Answer **must be an Arabic numeral** (e.g. '0', '4'). If count is unknown or ambiguous – SKIP the question."
+                },
+                {
+                    "name": "Task Reachability",
+                    "count": "2-4",
+                    "examples": ["Can the robot stand in front of the oven?"],
+                    "rules": "Ask if the robot can STAND, DRIVE or PLACE ITSELF at a location observed in the image. Always answer 'Yes' or 'No'"
+                },
+                {
+                    "name": "Object Affordance",
+                    "count": "3-5",
+                    "examples": ["Which objects can be opened?"],
+                    "rules": "Use the affordance verbs extracted earlier in descriptions. Wh-questions are allowed"
+                },
+                {
+                    "name": "Manipulation Pre-condition",
+                    "count": "1-3",
+                    "examples": ["Is there a graspable mug on a reachable surface?"],
+                    "rules": "Combine affordance with reachability"
+                },
+                {
+                    "name": "Comparison",
+                    "count": "3-5",
+                    "examples": ["Which is larger: X or Y?","Which is positioned higher: X or Y?"],
+                    "rules": "Only use when both objects are visible and clearly distinguishable."
+                }
+            ],
+            "format": "Return a JSON list with 'question', 'answer', and 'category'."
+  }
+
+validation_prompt: >
+  Analyze the image and validate the given questions and answers strictly against it, ensuring no assumptions
+  are made beyond the visual evidence. Additionally, cross-check the QA against the entire scene description
+  to prevent inconsistencies. Remove questions that:
+  - Contradict the image or scene description.
+  - Require a specific viewpoint (e.g., 'Which is further back?', 'Which is positioned closer?', etc).
+  - Have ambiguous or multiple correct answers.
+  If multiple valid interpretations exist, select the one most consistent with both image and description.
+  Return only the filtered and validated questions, keeping their categories and answers in JSON format.
+
+filter_non_objects_prompt: >
+  Given the following words extracted from questions, filter out any words that are NOT objects.
+  Exclude prepositions, adjectives, numbers, and vague terms. Return only object names in JSON list format.

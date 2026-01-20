@@ -1,0 +1,569 @@
+[
+    {
+        "question": "Is the headboard made of metal?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug on the floor?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the tissue box green?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there pillows AND a chair?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many lamps are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a window in the scene?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is the door white?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the boat painting blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is a light switch placed on the door?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a door AND a window?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a painting OR a television?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many paintings are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": 0,
+        "similar": "No"
+    },
+    {
+        "question": "Is the floor brown?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is a vase located on the floor?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window AND an electrical outlet?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the window square?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a table in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a plant on the window?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a painting OR a rectangular object?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the picture frame brown?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the flag green?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the door frame next to the cabinet?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a light switch AND a door frame in the scene?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the wall blue?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the bed framed with wood?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Does the bedding have stripes?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a black rug present in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a painting placed above the bed?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window behind the blue curtain?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a ceiling fan OR a curtain in the scene?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp AND blinds in the scene?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many dressers are present?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": "1",
+        "similar": "No"
+    },
+    {
+        "question": "Is the dresser dark?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the laundry basket red?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a bed in the scene?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is a lamp placed on the dresser?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window AND curtains in the scene?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a dresser OR a laundry basket in the scene?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a bed AND a desk in the scene?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "What color are the pillows with stripes?",
+        "answer": "Gray and white",
+        "category": "Object Attributes",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the lampshade on the table?",
+        "answer": "Beige",
+        "category": "Object Attributes",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned behind the pillows?",
+        "answer": "Wooden framed headboard",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What is on the table?",
+        "answer": "Beige lampshade lamp, Blue tissues box",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "Which is positioned higher: the lamp or the drawer table?",
+        "answer": "The lamp",
+        "category": "Comparison",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the floor?",
+        "answer": "Brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the baseboard?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is located on the wall?",
+        "answer": "Framed boat painting, electrical outlet, baseboard",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is along the wall?",
+        "answer": "White baseboard",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger: the window or the outlet?",
+        "answer": "Window",
+        "category": "Comparison",
+        "scene_graph_answer": "window",
+        "similar": "Yes"
+    },
+    {
+        "question": "Which is positioned higher: the painting or the baseboard?",
+        "answer": "Painting",
+        "category": "Comparison",
+        "scene_graph_answer": "painting",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the window?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "white",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is in the room?",
+        "answer": "Framed boat painting, white door, white window with blinds, white electrical outlet, brown hardwood floor, white baseboard",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "beds",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger: the door or the electrical outlet?",
+        "answer": "Door",
+        "category": "Comparison",
+        "scene_graph_answer": "door",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is the color of the framed painting?",
+        "answer": "Dark brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is located on the right side of the scene?",
+        "answer": "Dark brown, framed painting",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Which is darker: the framed painting or the white rectangular object?",
+        "answer": "The framed painting",
+        "category": "Comparison",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the light switch?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "The light switch does not appear in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the frame?",
+        "answer": "Brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": "The frame does not appear in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What material is the cabinet made of?",
+        "answer": "Wooden",
+        "category": "Object Attributes",
+        "scene_graph_answer": "A wooden cabinet with a red door.",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is hanging on the wall?",
+        "answer": "Red white and blue flag",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Painting of a bridge at night.",
+        "similar": "No"
+    },
+    {
+        "question": "What is present in the scene?",
+        "answer": "Ceiling light",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Bed with striped comforter.",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger: the door or the light switch?",
+        "answer": "Door",
+        "category": "Comparison",
+        "scene_graph_answer": "The light switch does not appear in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "Which is positioned higher: the picture frame or the floor?",
+        "answer": "Picture frame",
+        "category": "Comparison",
+        "scene_graph_answer": "The picture frame and the floor do not appear in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger, the flag or the light switch?",
+        "answer": "Flag",
+        "category": "Comparison",
+        "scene_graph_answer": "The light switch does not appear in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the light gray wall?",
+        "answer": "Arched white door frame",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "The light gray wall does not appear in the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned on the left?",
+        "answer": "White wooden door",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "I cannot answer this question based on the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "Is the table lamp metal?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "I cannot answer this question based on the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What color are the blinds?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "I cannot answer this question based on the scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the ceiling fan?",
+        "answer": "White",
+        "category": "Object Attributes",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What is located above the bed?",
+        "answer": "Ceiling fan",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Ceiling fan with blades.",
+        "similar": "Yes"
+    },
+    {
+        "question": "What is near the bed?",
+        "answer": "Dresser",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A bed with a striped comforter.",
+        "similar": "No"
+    },
+    {
+        "question": "What might be adjacent to the tall dresser?",
+        "answer": "Blinds",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A wall on the side of a building.",
+        "similar": "No"
+    },
+    {
+        "question": "Which is taller: the dresser or the table lamp?",
+        "answer": "Dresser",
+        "category": "Comparison",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "Which is lighter: the white ceiling fan or the dark wooden dresser?",
+        "answer": "Ceiling fan",
+        "category": "Comparison",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "Which is longer: the bed or the table lamp?",
+        "answer": "Bed",
+        "category": "Comparison",
+        "scene_graph_answer": "N/A",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the bed with stripes?",
+        "answer": "White and blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "striped",
+        "similar": "Yes"
+    },
+    {
+        "question": "What color is the object on the wooden dresser?",
+        "answer": "Orange",
+        "category": "Object Attributes",
+        "scene_graph_answer": "purple",
+        "similar": "No"
+    },
+    {
+        "question": "What material is the laundry basket made of?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "A",
+        "similar": "No"
+    },
+    {
+        "question": "What is located behind the dresser?",
+        "answer": "Window",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A wall on the side of a building.",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the dark wooden dresser?",
+        "answer": "Gray laundry basket",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "A wall on the side of a building.",
+        "similar": "No"
+    },
+    {
+        "question": "What is in front of the window?",
+        "answer": "Dark wooden dresser",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "Curtains",
+        "similar": "No"
+    }
+]

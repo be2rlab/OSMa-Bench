@@ -1,0 +1,401 @@
+[
+    {
+        "question": "Is the mirror intact?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the chair green?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a book on the table?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a painting on the brick column?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a green plant AND a purple chair?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a broken mirror OR a wooden table?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many purple decorative chairs are visible?",
+        "answer": "2",
+        "category": "Measurement",
+        "scene_graph_answer": 1,
+        "similar": "No"
+    },
+    {
+        "question": "Is the carpet a specific color?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Does the armchair have a particular texture?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a window in the scene?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Is the plant located on the pedestal?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a patterned armchair AND a lit lantern?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a bust OR a plant?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is there a green wall AND a window?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many tables are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "4",
+        "similar": "No"
+    },
+    {
+        "question": "Is the plant green?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Is the handrail wooden?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a red book on the surface?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a plant and a metal handrail?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "How many vases are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "Is the staircase stone?",
+        "answer": "Yes",
+        "category": "Binary General",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the wall made of glass?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is the railing metal?",
+        "answer": "No",
+        "category": "Binary General",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp in the scene?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a rug on the stairs?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a window behind the stairs?",
+        "answer": "No",
+        "category": "Binary Existence-Based",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a staircase AND a railing?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a picture AND an opening?",
+        "answer": "Yes",
+        "category": "Binary Logical",
+        "scene_graph_answer": "Yes",
+        "similar": "Yes"
+    },
+    {
+        "question": "Is there a lamp OR a rug?",
+        "answer": "No",
+        "category": "Binary Logical",
+        "scene_graph_answer": "No",
+        "similar": "Yes"
+    },
+    {
+        "question": "How many staircases are present?",
+        "answer": "1",
+        "category": "Measurement",
+        "scene_graph_answer": 6,
+        "similar": "No"
+    },
+    {
+        "question": "What color is the plant pot on the table?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is the shape of the picture to the left of the small picture?",
+        "answer": "Circular",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is to the right of the framed pictures?",
+        "answer": "Brick column",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is above the heater?",
+        "answer": "Small framed picture",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the wall that is painted?",
+        "answer": "Green",
+        "category": "Object Attributes",
+        "scene_graph_answer": 0,
+        "similar": "No"
+    },
+    {
+        "question": "What color is the round carpet?",
+        "answer": "Brown",
+        "category": "Object Attributes",
+        "scene_graph_answer": 0,
+        "similar": "No"
+    },
+    {
+        "question": "What is located on the pedestal?",
+        "answer": "White bust",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "I am sorry, I cannot answer this question because the scene graph does not contain the word pedestal.",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned on the round brown table?",
+        "answer": "Decorative green plant",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "I am sorry, I cannot answer this question because the scene graph does not contain the words brown table.",
+        "similar": "No"
+    },
+    {
+        "question": "What is present in the scene that is dark?",
+        "answer": "Arched doorway",
+        "category": "Object Attributes",
+        "scene_graph_answer": "I am sorry, I cannot answer this question because the scene graph does not contain the word dark.",
+        "similar": "No"
+    },
+    {
+        "question": "Which has a pattern: the armchair or the carpet?",
+        "answer": "Armchair",
+        "category": "Comparison",
+        "scene_graph_answer": "I am sorry, I cannot answer this question because the scene graph does not contain the words armchair or carpet.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the metallic vase?",
+        "answer": "Gray",
+        "category": "Object Attributes",
+        "scene_graph_answer": "I am sorry, I cannot answer this question because the scene graph does not contain the word metallic.",
+        "similar": "No"
+    },
+    {
+        "question": "What is the texture of the wall?",
+        "answer": "Textured",
+        "category": "Object Attributes",
+        "scene_graph_answer": "I cannot answer this question from the given scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is inside the gray metallic vase?",
+        "answer": "Green plant",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "I cannot answer this question from the given scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is the vase placed on?",
+        "answer": "Gray stone surface",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "I cannot answer this question from the given scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What is next to the staircase?",
+        "answer": "Gray textured wall",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "I cannot answer this question from the given scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "Which object serves as the vase's support?",
+        "answer": "Gray stone surface",
+        "category": "Object Relations - Functional",
+        "scene_graph_answer": "I cannot answer this question from the given scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "Which is larger: the staircase or the vase?",
+        "answer": "Staircase",
+        "category": "Comparison",
+        "scene_graph_answer": "I cannot answer this question from the given scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "Which is positioned higher: the plant or the surface?",
+        "answer": "Plant",
+        "category": "Comparison",
+        "scene_graph_answer": "I cannot answer this question from the given scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "Which is darker: the vase or the handrail?",
+        "answer": "Handrail",
+        "category": "Comparison",
+        "scene_graph_answer": "I cannot answer this question from the given scene graph.",
+        "similar": "No"
+    },
+    {
+        "question": "What color is the stone staircase?",
+        "answer": "Dark blue",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What material is the railing made of?",
+        "answer": "Wood",
+        "category": "Object Attributes",
+        "scene_graph_answer": "0",
+        "similar": "No"
+    },
+    {
+        "question": "What is positioned above the stairs?",
+        "answer": "Picture",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "wall",
+        "similar": "No"
+    },
+    {
+        "question": "What is along the stairs?",
+        "answer": "Railing",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "wall",
+        "similar": "No"
+    },
+    {
+        "question": "What is behind the stairs?",
+        "answer": "Opening",
+        "category": "Object Relations - Spatial",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Which is darker: the opening or the picture frame?",
+        "answer": "Picture frame",
+        "category": "Comparison",
+        "scene_graph_answer": "Yes",
+        "similar": "No"
+    },
+    {
+        "question": "Which is lighter: the wall or the opening?",
+        "answer": "Wall",
+        "category": "Comparison",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    },
+    {
+        "question": "Which is higher: the wall or the staircase?",
+        "answer": "Wall",
+        "category": "Comparison",
+        "scene_graph_answer": "No",
+        "similar": "No"
+    }
+]
