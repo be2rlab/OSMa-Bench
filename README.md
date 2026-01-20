@@ -75,6 +75,10 @@ For detailed instructions on setup, execution, and workflow, please refer to the
 
 ## Visual Question Answering
 
+> [!NOTE]
+> We’ve also prepared a refactored version of the VQA module with OllamaAPI support.
+> Please follow the [vqa_refactoring branch](https://github.com/be2rlab/OSMa-Bench/tree/vqa_refactoring) for it.
+
 VQA module provides an automated end-to-end workflow for generating and evaluating question-answer pairs from 2D images. It integrates LVLM and LLM to extract frame-based scene descriptions, synthesize QA pairs, validate outputs, and assess accuracy through scene-graph reasoning. 
 
 The `vqa/` directory contains the full evaluation pipeline, including scripts, utilities, and configuration files.

@@ -1,5 +1,9 @@
 # 3D-Scene QA Pipeline
 
+> [!NOTE]
+> We’ve also prepared a refactored version of the VQA module with OllamaAPI support.
+> Please follow the [vqa_refactoring branch](https://github.com/be2rlab/OSMa-Bench/tree/vqa_refactoring) for it.
+
 Main contributor: <a href="https://github.com/lumalfo/"><strong>Regina Kurkova</strong></a>
 
 > End-to-end pipeline that  
